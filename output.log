@@ -638,10 +638,6 @@ Overfull \hbox (17.49368pt too wide) in alignment at lines 16--21
  []
 
 
-LaTeX Warning: Reference `chap:overleafCI' on page ii undefined on input line 2
-4.
-
-
 Overfull \hbox (17.49368pt too wide) in alignment at lines 21--57
  [] [] 
  []
@@ -679,7 +675,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5])
+[5]
+! Misplaced alignment tab character &.
+<argument> ...numberline {6}Overleaf Compilation &
+                                                   Sync with GitHub}\Hy@tocl...
+l.146 ...lation & Sync with GitHub}{39}{chapter.6}
+                                                  %
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+)
 \tf@toc=\write6
 \openout6 = `output.toc'.
 
@@ -825,7 +834,7 @@ Chapter 3.
 \pydata@fh@0=\write9
 \openout9 = `_78E6221F6393D1356681DB398F14CE6D.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251023033606Z 78E6221F6393D1356681D
+runsystem(latexminted config  --timestamp 20251023033609Z 78E6221F6393D1356681D
 B398F14CE6D)...executed safely (allowed).
 
 
@@ -915,4 +924,1425 @@ l.57 \end{minted}
 (That was another \errmessage.)
 
 
-! Package minted Error: Cannot highlight code (minted executable is
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \end{minted}
+                  
+(That was another \errmessage.)
+
+<png/aws-screenshot-1.jpeg, id=700, 1284.8pt x 337.26pt>
+File: png/aws-screenshot-1.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-1.jpeg>
+Package pdftex.def Info: png/aws-screenshot-1.jpeg  used on input line 124.
+(pdftex.def)             Requested size: 217.42265pt x 57.07098pt.
+<png/aws-screenshot-2.jpeg, id=701, 1284.8pt x 89.33376pt>
+File: png/aws-screenshot-2.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-2.jpeg>
+Package pdftex.def Info: png/aws-screenshot-2.jpeg  used on input line 131.
+(pdftex.def)             Requested size: 217.42265pt x 15.117pt.
+<png/aws-screenshot-3.jpeg, id=702, 1284.8pt x 508.90125pt>
+File: png/aws-screenshot-3.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-3.jpeg>
+Package pdftex.def Info: png/aws-screenshot-3.jpeg  used on input line 141.
+(pdftex.def)             Requested size: 217.42265pt x 86.11604pt.
+<png/aws-screenshot-4.jpeg, id=703, 1284.8pt x 468.75125pt>
+File: png/aws-screenshot-4.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-4.jpeg>
+Package pdftex.def Info: png/aws-screenshot-4.jpeg  used on input line 148.
+(pdftex.def)             Requested size: 217.42265pt x 79.32187pt.
+<png/aws-screenshot-5.jpeg, id=704, 1284.8pt x 501.875pt>
+File: png/aws-screenshot-5.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-5.jpeg>
+Package pdftex.def Info: png/aws-screenshot-5.jpeg  used on input line 158.
+(pdftex.def)             Requested size: 217.42265pt x 84.92706pt.
+<png/aws-screenshot-6.jpeg, id=705, 1284.8pt x 476.78125pt>
+File: png/aws-screenshot-6.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-6.jpeg>
+Package pdftex.def Info: png/aws-screenshot-6.jpeg  used on input line 165.
+(pdftex.def)             Requested size: 217.42265pt x 80.68071pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12 <./png/aws-screenshot-1.jpeg> <./png/aws-screenshot-2.jpeg> <./png/aws-scre
+enshot-3.jpeg> <./png/aws-screenshot-4.jpeg> <./png/aws-screenshot-5.jpeg> <./p
+ng/aws-screenshot-6.jpeg>]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.207 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.234 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.285 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.332 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \end{minted}
+                  
+(That was another \errmessage.)
+
+)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+\openout2 = `digitalOceanSetup.aux'.
+
+(./digitalOceanSetup.tex
+Chapter 4.
+
+
+[17
+
+
+
+
+]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
+Overfull \hbox (28.68234pt too wide) in paragraph at lines 188--188
+[]      \OT1/cmtt/m/n/12 OVERLEAF_MONGO_URL: mongodb://mongo:27017/sharelatex?r
+eplicaSet=overleaf[] 
+ []
+
+
+Overfull \hbox (17.04523pt too wide) in paragraph at lines 217--218
+[]\OT1/cmr/bx/n/12 Persistent Stor-age: \OT1/cmr/m/n/12 Three bind mounts for O
+ver-leaf data (\OT1/cmtt/m/n/12 /root/sharelatex[]data\OT1/cmr/m/n/12 ),
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+Overfull \hbox (10.35461pt too wide) in paragraph at lines 238--239
+\OT1/cmr/m/n/12 Overleaf 5.0+ dep-re-cated \OT1/cmtt/m/n/12 SHARELATEX[] \OT1/c
+mr/m/n/12 pre-fixed en-vi-ron-ment vari-ables in fa-vor of \OT1/cmtt/m/n/12 OVE
+RLEAF[]
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+\openout2 = `overleafDeployment.aux'.
+
+(./overleafDeployment.tex
+Chapter 5.
+
+
+[24
+
+
+
+
+]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+Overfull \hbox (18.12447pt too wide) in paragraph at lines 85--86
+\OT1/cmr/m/n/12 Ensure the fol-low-ing re-quire-ments are met on your Dig-i-tal
+O-cean Droplet (IP: 142.93.207.133): 
+ []
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.214 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.224 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.243 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.249 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.349 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.417 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.507 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+Overfull \hbox (10.19823pt too wide) in paragraph at lines 522--523
+\OT1/cmr/m/n/12 Command-line com-pi-la-tion en-ables au-to-mated builds and in-
+te-gra-tion with CI/CD pipelines.
+ []
+
+
+Overfull \hbox (24.58559pt too wide) in paragraph at lines 522--523
+\OT1/cmr/m/n/12 All com-pi-la-tion com-mands are ex-e-cuted via SSH on the Dig-
+i-talO-cean Droplet (142.93.207.133). 
+ []
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.530 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.538 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.547 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.554 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.562 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.570 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.584 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.594 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
+Overfull \hbox (6.92712pt too wide) in paragraph at lines 594--594
+\OT1/cmtt/m/n/10.95 sharelatex:/var/lib/overleaf/data/compiles/68f14824c7c1f423
+d5bbe7bc/main.pdf 
+ []
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.602 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.614 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.626 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.632 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+Overfull \hbox (6.92712pt too wide) in paragraph at lines 632--632
+\OT1/cmtt/m/n/10.95 sharelatex:/var/lib/overleaf/data/compiles/68f14824c7c1f423
+d5bbe7bc/main.pdf 
+ []
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.642 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.651 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.661 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.692 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.722 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.728 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.750 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+Overfull \hbox (6.92712pt too wide) in paragraph at lines 750--750
+\OT1/cmtt/m/n/10.95 sharelatex:/var/lib/overleaf/data/compiles/68f14824c7c1f423
+d5bbe7bc/main.pdf 
+ []
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.762 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.776 \end{minted}
+                  
+(That was another \errmessage.)
+
+)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38]
+\openout2 = `overCI.aux'.
+
+(./overCI.tex
+Chapter 6.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `alignment tab' on input line 1.
+
+! Misplaced alignment tab character &.
+<argument> Overleaf Compilation &
+                                  Sync with GitHub
+l.1 ...er{Overleaf Compilation & Sync with GitHub}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (182.80302pt too wide) in paragraph at lines 8--9
+[]\OT1/cmr/bx/n/12 Project Path: \OT1/cmtt/m/n/12 /root/sharelatex[]data/data/c
+ompiles/68f9818f6cbab3ad67b265f7-68f14753eda193f7e7fa0355 
+ []
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+
+[39
+
+
+
+
+]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[44]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.407 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.439 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[47]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 \end{minted}
+                  
+(That was another \errmessage.)
+
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.500     \item[$\checkmark$]
+                              Cron job running every 5 seconds
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.501     \item[$\checkmark$]
+                              Files syncing from Overleaf to GitHub
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.502     \item[$\checkmark$]
+                              .github folder protected from deletion
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48]
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.503     \item[$\checkmark$]
+                              GitHub Actions workflow executing on push
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.504     \item[$\checkmark$]
+                              PDF being compiled with commit hash
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.505     \item[$\checkmark$]
+                              PDF saved to builds/ directory
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \checkmark 
+                           
+l.506     \item[$\checkmark$]
+                              All changes committed and pushed
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.528 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.545 \end{minted}
+                  
+(That was another \errmessage.)
+
+)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49]
+
+Package glossaries Info: Preparing to sort glossary `main' (total number of
+(glossaries)       
