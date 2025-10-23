@@ -11,7 +11,6 @@
   \indexspace
 
   \item chmod command, \hyperpage{3}
-  \item CI/CD, \hyperpage{39}
 
   \indexspace
 
@@ -29,7 +28,6 @@
 
   \indexspace
 
-  \item GitHub Actions, \hyperpage{39}
   \item Github Actions, \hyperpage{8}
   \item grep command, \hyperpage{2}
 
@@ -39,7 +37,7 @@
 
   \indexspace
 
-  \item LaTeX, \hyperpage{14}, \hyperpage{39}
+  \item LaTeX, \hyperpage{14}
   \item Linux commands, \hyperpage{1}
   \item ls command, \hyperpage{1}
 
@@ -53,28 +51,11 @@
 
   \indexspace
 
-  \item Overleaf, \hyperpage{39}
-
-  \indexspace
-
   \item ps command, \hyperpage{4}
   \item pwd command, \hyperpage{1}
-  \item Pygments, \hyperpage{42}
-
-  \indexspace
-
-  \item shell-escape, \hyperpage{42}
 
   \indexspace
 
   \item tar command, \hyperpage{5}
-
-  \indexspace
-
-  \item version control, \hyperpage{39}
-
-  \indexspace
-
-  \item workflow file, \hyperpage{40}
 
 \end{theindex}
