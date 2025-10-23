@@ -1,135 +1,415 @@
-\chapter{Overleaf CI with GitHub Action}
-\label{chap:overleafCI}
+% Code listing settings
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    showstringspaces=false
+}
 
-\section{Introduction}
+\title{Overleaf CI with GitHub}
+\label{chap::overleafCI}
 
-This chapter documents the implementation of a CI/CD\index{CI/CD} pipeline using GitHub Actions\index{GitHub Actions} to automatically compile LaTeX\index{LaTeX} documents, inject version information, and archive compiled PDFs.
+\begin{document}
 
-\section{Project Setup from Overleaf}
+\maketitle
+\tableofcontents
+\newpage
 
-\subsection{Exporting Overleaf Project}
+\section{System Overview}
 
-The collaborative LaTeX project was initially developed on Overleaf\index{Overleaf}. The project was exported and prepared for Git version control\index{version control}:
+\begin{itemize}
+    \item \textbf{Overleaf Instance:} DigitalOcean Droplet (IP: 142.93.207.133)
+    \item \textbf{Project Path:} \texttt{/root/sharelatex\_data/data/compiles/68f9818f6cbab3ad67b265f7-68f14753eda193f7e7fa0355}
+    \item \textbf{Backup Directory:} \texttt{/root/overleaf\_backups}
+    \item \textbf{GitHub Repository:} Connected via SSH
+    \item \textbf{Automation:} Cron job (every 5 seconds) + GitHub Actions
+\end{itemize}
 
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Download project from Overleaf as ZIP file
-# File downloaded: overleaf-project.zip
+\section{Step 1: SSH into DigitalOcean Droplet}
 
-# Extract the ZIP file
-unzip overleaf-project.zip -d latex-project
-cd latex-project
+\begin{lstlisting}[language=bash]
+ssh root@142.93.207.133
+\end{lstlisting}
 
-# Initialize Git repository
+\section{Step 2: Create Backup Directory and Initialize Git}
+
+\begin{lstlisting}[language=bash]
+# Create backup directory
+mkdir -p /root/overleaf_backups
+cd /root/overleaf_backups
+
+# Initialize git repository
 git init
-
-# Create initial commit
-git add .
-git commit -m "Initial commit: Import from Overleaf"
-
-# Create GitHub repository and link
-git remote add origin https://github.com/Badri-Narayanan/overleaf-local-grp14.git
 git branch -M main
-git push -u origin main
-\end{minted}
 
-\subsection{Project Structure}
+# Configure git credentials
+git config user.name "Badri-Narayanan"
+git config user.email "badhrirajen@gmail.com"
 
-After extraction, the project contains:
+# Generate SSH key for GitHub
+ssh-keygen -t ed25519 -C "badhrirajen@gmail.com" -f /root/.ssh/id_ed25519 -N ""
 
-\begin{minted}[breaklines,fontsize=\small]{text}
-latex-project/
-├── groupAssignments.tex        # Main document
-├── itGlossary.tex              # Glossary definitions
-├── bibfile.bib                 # Bibliography
-├── history.tex                 # Revision history
-├── itPasswords.tex             # Service credentials
-├── linuxCommands.tex           # Chapter 1
-├── projectProposal.tex         # Chapter 2
-├── awsDeployment.tex           # Chapter 3
-├── digitalOceanSetup.tex       # Chapter 4
-├── overleafDeployment.tex      # Chapter 5
-└── png/                        # Images directory
-\end{minted}
+# Display public key (add this to GitHub)
+cat /root/.ssh/id_ed25519.pub
+\end{lstlisting}
 
-\section{GitHub Actions Workflow Setup}
+\textbf{Add SSH key to GitHub:}
+\begin{enumerate}
+    \item Copy the public key output
+    \item Go to GitHub $\rightarrow$ Settings $\rightarrow$ SSH and GPG keys $\rightarrow$ New SSH key
+    \item Paste and save
+\end{enumerate}
 
-\subsection{Workflow File Creation}
+\begin{lstlisting}[language=bash]
+# Add GitHub remote (replace with your repo URL)
+git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 
-Create \texttt{.github/workflows/label-project.yml}\index{workflow file}:
+# Test connection
+ssh -T git@github.com
+\end{lstlisting}
 
-\begin{minted}[breaklines,fontsize=\small]{yaml}
+\section{Step 3: Create Backup Script}
+
+\begin{lstlisting}[language=bash]
+nano /root/backup-overleaf-projects.sh
+\end{lstlisting}
+
+\textbf{Script Content:}
+
+\begin{lstlisting}[language=bash]
+#!/bin/bash
+
+# Configuration
+SOURCE_DIR="/root/sharelatex_data/data/compiles/68f9818f6cbab3ad67b265f7-68f14753eda193f7e7fa0355"
+BACKUP_DIR="/root/overleaf_backups"
+LOG_FILE="/var/log/overleaf-backup.log"
+GIT_BRANCH="main"
+MAX_LOG_SIZE=10485760  # 10MB
+
+# Function to rotate log if too large
+rotate_log() {
+    if [ -f "$LOG_FILE" ]; then
+        LOG_SIZE=$(stat -f%z "$LOG_FILE" 2>/dev/null || stat -c%s "$LOG_FILE" 2>/dev/null)
+        if [ "$LOG_SIZE" -gt "$MAX_LOG_SIZE" ]; then
+            mv "$LOG_FILE" "$LOG_FILE.old"
+            echo "Log rotated at $(date '+%Y-%m-%d %H:%M:%S')" > "$LOG_FILE"
+        fi
+    fi
+}
+
+# Function to log messages with timestamp
+log_message() {
+    local TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[$TIMESTAMP] $1" >> "$LOG_FILE"
+}
+
+# Function to log errors
+log_error() {
+    local TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[$TIMESTAMP] ERROR: $1" >> "$LOG_FILE"
+}
+
+# Function to log success
+log_success() {
+    local TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[$TIMESTAMP] SUCCESS: $1" >> "$LOG_FILE"
+}
+
+# Rotate log if needed
+rotate_log
+
+# Start backup process
+log_message "========== Starting backup process =========="
+
+# Check if source directory exists
+if [ ! -d "$SOURCE_DIR" ]; then
+    log_error "Source directory does not exist: $SOURCE_DIR"
+    exit 1
+fi
+
+log_message "Source directory exists: $SOURCE_DIR"
+
+# Check if backup directory exists
+if [ ! -d "$BACKUP_DIR" ]; then
+    log_error "Backup directory does not exist: $BACKUP_DIR"
+    exit 1
+fi
+
+log_message "Backup directory exists: $BACKUP_DIR"
+
+# Check if backup directory is a git repository
+if [ ! -d "$BACKUP_DIR/.git" ]; then
+    log_error "Backup directory is not a Git repository: $BACKUP_DIR"
+    exit 1
+fi
+
+log_message "Git repository detected in backup directory"
+
+# Change to backup directory
+cd "$BACKUP_DIR" || {
+    log_error "Cannot change to backup directory: $BACKUP_DIR"
+    exit 1
+}
+
+log_message "Changed to backup directory"
+
+# Check if we're on the correct branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+if [ "$CURRENT_BRANCH" != "$GIT_BRANCH" ]; then
+    log_message "Current branch is $CURRENT_BRANCH, switching to $GIT_BRANCH"
+    git checkout "$GIT_BRANCH" >> "$LOG_FILE" 2>&1
+    if [ $? -ne 0 ]; then
+        log_error "Failed to checkout branch $GIT_BRANCH"
+        exit 1
+    fi
+fi
+
+# Stash any local changes to protected files before pulling
+log_message "Checking for local changes to protected files"
+PROTECTED_FILES=".github .gitignore README.md builds"
+HAS_PROTECTED_CHANGES=false
+
+for file in $PROTECTED_FILES; do
+    if [ -e "$file" ] && git diff --quiet "$file" 2>/dev/null; then
+        :
+    elif [ -e "$file" ]; then
+        HAS_PROTECTED_CHANGES=true
+        break
+    fi
+done
+
+if [ "$HAS_PROTECTED_CHANGES" = true ]; then
+    log_message "Stashing changes to protected files"
+    git stash push -m "Auto-stash before pull $(date '+%Y-%m-%d %H:%M:%S')" $PROTECTED_FILES >> "$LOG_FILE" 2>&1
+fi
+
+# Pull latest changes from remote
+log_message "Pulling latest changes from remote"
+git pull origin "$GIT_BRANCH" >> "$LOG_FILE" 2>&1
+PULL_EXIT_CODE=$?
+
+if [ $PULL_EXIT_CODE -eq 0 ]; then
+    log_success "Successfully pulled from remote"
+else
+    log_error "Git pull failed with exit code $PULL_EXIT_CODE"
+    log_message "Attempting to continue anyway..."
+fi
+
+# Pop stashed changes if any
+if [ "$HAS_PROTECTED_CHANGES" = true ]; then
+    log_message "Restoring stashed changes"
+    git stash pop >> "$LOG_FILE" 2>&1
+fi
+
+# Ensure .github directory exists
+if [ ! -d "$BACKUP_DIR/.github" ]; then
+    log_message ".github directory not found, creating it"
+    mkdir -p "$BACKUP_DIR/.github/workflows"
+fi
+
+# Sync the compiles directory to backup location
+log_message "Starting rsync from $SOURCE_DIR to $BACKUP_DIR"
+
+rsync -av --delete \
+    --exclude='.git' \
+    --exclude='.git/' \
+    --exclude='.github' \
+    --exclude='.github/' \
+    --exclude='.gitignore' \
+    --exclude='README.md' \
+    --exclude='LICENSE' \
+    --exclude='builds' \
+    --exclude='builds/' \
+    "$SOURCE_DIR/" "$BACKUP_DIR/" >> "$LOG_FILE" 2>&1
+
+RSYNC_EXIT_CODE=$?
+
+if [ $RSYNC_EXIT_CODE -eq 0 ]; then
+    log_success "Rsync completed successfully"
+else
+    log_error "Rsync failed with exit code $RSYNC_EXIT_CODE"
+    exit 1
+fi
+
+# Check Git status before staging
+log_message "Checking for changes in Git repository"
+git status --porcelain >> "$LOG_FILE" 2>&1
+
+# Stage all changes
+log_message "Staging all changes"
+git add -A >> "$LOG_FILE" 2>&1
+
+if [ $? -ne 0 ]; then
+    log_error "Failed to stage changes"
+    exit 1
+fi
+
+# Check if there are any changes to commit
+if git diff --cached --quiet; then
+    log_message "No changes detected - nothing to commit"
+    log_message "========== Backup process completed (no changes) =========="
+    exit 0
+fi
+
+# Count the changes
+ADDED=$(git diff --cached --numstat | wc -l)
+log_message "Changes detected: $ADDED file(s) modified/added/deleted"
+
+# Show what changed for debugging
+log_message "Files changed:"
+git diff --cached --name-status >> "$LOG_FILE" 2>&1
+
+# Create commit message with details
+COMMIT_TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+COMMIT_MESSAGE="Auto-backup: $COMMIT_TIMESTAMP
+
+Changes: $ADDED file(s) modified/added/deleted
+Source: $SOURCE_DIR"
+
+# Commit the changes
+log_message "Committing changes"
+git commit -m "$COMMIT_MESSAGE" >> "$LOG_FILE" 2>&1
+COMMIT_EXIT_CODE=$?
+
+if [ $COMMIT_EXIT_CODE -ne 0 ]; then
+    log_error "Git commit failed with exit code $COMMIT_EXIT_CODE"
+    exit 1
+fi
+
+log_success "Changes committed successfully"
+
+# Push to remote repository
+log_message "Pushing to remote repository (branch: $GIT_BRANCH)"
+git push origin "$GIT_BRANCH" >> "$LOG_FILE" 2>&1
+PUSH_EXIT_CODE=$?
+
+if [ $PUSH_EXIT_CODE -eq 0 ]; then
+    log_success "Changes pushed to remote repository successfully"
+    COMMIT_HASH=$(git rev-parse --short HEAD)
+    log_message "Commit hash: $COMMIT_HASH"
+else
+    log_error "Git push failed with exit code $PUSH_EXIT_CODE"
+    log_message "Checking if local is behind remote..."
+    git fetch origin "$GIT_BRANCH" >> "$LOG_FILE" 2>&1
+    LOCAL=$(git rev-parse @)
+    REMOTE=$(git rev-parse @{u})
+    if [ "$LOCAL" != "$REMOTE" ]; then
+        log_message "Local is out of sync with remote, will retry on next run"
+    fi
+    exit 1
+fi
+
+log_message "========== Backup process completed successfully =========="
+exit 0
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+# Make script executable
+chmod +x /root/backup-overleaf-projects.sh
+\end{lstlisting}
+
+\section{Step 4: Setup Cron Job (Every 5 Seconds)}
+
+\begin{lstlisting}[language=bash]
+crontab -e
+\end{lstlisting}
+
+\textbf{Add these lines:}
+
+\begin{lstlisting}
+* * * * * /root/backup-overleaf-projects.sh
+* * * * * sleep 5; /root/backup-overleaf-projects.sh
+* * * * * sleep 10; /root/backup-overleaf-projects.sh
+* * * * * sleep 15; /root/backup-overleaf-projects.sh
+* * * * * sleep 20; /root/backup-overleaf-projects.sh
+* * * * * sleep 25; /root/backup-overleaf-projects.sh
+* * * * * sleep 30; /root/backup-overleaf-projects.sh
+* * * * * sleep 35; /root/backup-overleaf-projects.sh
+* * * * * sleep 40; /root/backup-overleaf-projects.sh
+* * * * * sleep 45; /root/backup-overleaf-projects.sh
+* * * * * sleep 50; /root/backup-overleaf-projects.sh
+* * * * * sleep 55; /root/backup-overleaf-projects.sh
+\end{lstlisting}
+
+\textbf{Verify cron is running:}
+
+\begin{lstlisting}[language=bash]
+sudo systemctl status cron
+crontab -l
+\end{lstlisting}
+
+\section{Step 5: Create GitHub Actions Workflow}
+
+\begin{lstlisting}[language=bash]
+# Create workflow directory
+mkdir -p /root/overleaf_backups/.github/workflows
+
+# Create workflow file
+nano /root/overleaf_backups/.github/workflows/build.yml
+\end{lstlisting}
+
+\textbf{Workflow Content (YAML):}
+
+\begin{lstlisting}[language=yaml]
 name: Build LaTeX PDF
-
 permissions:
   contents: write
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
           fetch-depth: 0
-
+      
       - name: Install TeX Live and Pygments
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-full python3-pygments
-
+      
       - name: Get Git commit hash
         run: echo "GIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-
+      
       - name: Update version in groupAssignments.tex
         run: |
           sed -i "s/\\\\newcommand{\\\\gitversion}{Unknown}/\\\\newcommand{\\\\gitversion}{${GIT_HASH}}/" groupAssignments.tex
           echo "Updated version to: ${GIT_HASH}"
-          grep "gitversion" groupAssignments.tex
-
-      - name: Compile LaTeX document (Pass 1)
+      
+      - name: Compile LaTeX document
         run: |
           pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex || true
-
-      - name: Run BibTeX
-        run: |
           bibtex groupAssignments || true
-
-      - name: Run MakeIndex
-        run: |
           makeindex groupAssignments.idx || true
-
-      - name: Compile LaTeX document (Pass 2)
-        run: |
           pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex || true
-
-      - name: Compile LaTeX document (Pass 3 - Final)
-        run: |
           pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex || true
-
-      - name: Check if PDF was generated
+      
+      - name: Verify PDF was created
         run: |
           if [ -f "groupAssignments.pdf" ]; then
-            echo "PDF generated successfully!"
+            echo "PDF successfully generated"
             ls -lh groupAssignments.pdf
           else
             echo "ERROR: PDF was not generated!"
             exit 1
           fi
-
+      
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: Compiled-PDF
           path: groupAssignments.pdf
-
+      
       - name: Commit PDF to repo
         if: success()
         env:
@@ -142,230 +422,146 @@ jobs:
           git add builds/document_${GIT_HASH}.pdf
           git commit -m "Auto-build PDF for commit ${GIT_HASH}" || echo "No changes to commit"
           git push origin HEAD:main || echo "Push failed"
-\end{minted}
+\end{lstlisting}
 
-\subsection{Key Workflow Components}
+\section{Step 6: Initial Commit and Push}
 
-\textbf{Critical Flags:}
-\begin{itemize}
-    \item \texttt{-shell-escape}: Required for minted package\index{shell-escape}
-    \item \texttt{-interaction=nonstopmode}: Non-interactive compilation
-    \item \texttt{|| true}: Continue on warnings
-\end{itemize}
+\begin{lstlisting}[language=bash]
+cd /root/overleaf_backups
 
-\textbf{Dependencies:}
-\begin{itemize}
-    \item \texttt{texlive-full}: Complete LaTeX distribution
-    \item \texttt{python3-pygments}: Required for minted syntax highlighting\index{Pygments}
-\end{itemize}
+# Add .gitignore
+cat > .gitignore << 'EOF'
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+_minted-*
+*.idx
+*.ilg
+*.ind
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+EOF
 
-\section{LaTeX Document Configuration}
+# Add all files
+git add -A
 
-\subsection{Preamble Setup}
+# Initial commit
+git commit -m "Initial commit: Overleaf project setup"
 
-Modify \texttt{groupAssignments.tex} preamble:
-
-\begin{minted}[breaklines,fontsize=\small]{latex}
-\documentclass[12pt,a4paper]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
-\usepackage{titling}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{fancyhdr}
-\usepackage{minted}
-\usepackage{graphicx}
-\usepackage{url}
-\usepackage{longtable}
-\usepackage{enumitem}
-\usepackage{makeidx}
-
-% Hyperref configuration (removed pdfmark option)
-\usepackage[
-breaklinks=true, 
-colorlinks=true,
-citecolor=blue,
-linkcolor=blue,
-menucolor=black,
-urlcolor=blue
-]{hyperref}
-
-% Glossaries configuration (removed unsupported options)
-\usepackage[toc]{glossaries}
-
-% Load glossary definitions
-\input{itGlossary.tex}
-\makenoidxglossaries
-
-% Make index
-\makeindex
-
-% Git version command - updated by GitHub Actions
-\newcommand{\gitversion}{Unknown}
-
-% Header/Footer setup
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-\fancyhead[L]{v\gitversion}
-\fancyhead[C]{Chapter \thechapter \hspace{1em} \copyright Stevens -- \today \hspace{1em} -- Do Not Distribute!}
-\setlength{\headheight}{15pt}
-\renewcommand{\headrulewidth}{0pt}
-\end{minted}
-
-\subsection{Title Page with Version}
-
-\begin{minted}[breaklines,fontsize=\small]{latex}
-\begin{titlepage}
-    \centering
-    \vspace*{5cm}
-    
-    {\Huge\bfseries DevOps - Group 14 Assignments\par}
-    
-    \vspace{0.5cm}
-    {\large Document Version: \gitversion\par}
-    
-    \vspace{1cm}
-    
-    {\Large by\par}
-    
-    \vspace{0.5cm}
-    
-    {\Large
-    Andre Santiago-Neyra\\
-    Badri Narayanan Rajendran\\
-    }
-    
-    \vspace{1cm}
-    
-    {\large Stevens.edu\par}
-    
-    \vfill
-    
-    {\large October 2, 2025\par}
-    
-\end{titlepage}
-\end{minted}
-
-\section{Glossary Configuration}
-
-\subsection{Adding Glossary Entries}
-
-In \texttt{itGlossary.tex}, add required entries:
-
-\begin{minted}[breaklines,fontsize=\small]{latex}
-\newglossaryentry{cicd}{
-    name={CI/CD},
-    description={Continuous Integration and Continuous Deployment - automated software development practices for frequent code integration and deployment}
-}
-\end{minted}
-
-\subsection{Using Glossary Entries}
-
-In document text:
-
-\begin{minted}[breaklines,fontsize=\small]{latex}
-... deployment processes using two \gls{cicd} tools: Jenkins and GitHub Actions...
-\end{minted}
-
-\section{Implementation Steps}
-
-\subsection{Step 1: Export and Setup from Overleaf}
-
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Download ZIP from Overleaf
-# Extract and initialize repository
-unzip overleaf-project.zip -d latex-project
-cd latex-project
-git init
-git add .
-git commit -m "Initial commit from Overleaf"
-\end{minted}
-
-\subsection{Step 2: Create GitHub Repository}
-
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Create repository on GitHub (via web interface)
-# Link local repository to GitHub
-git remote add origin https://github.com/Badri-Narayanan/overleaf-local-grp14.git
-git branch -M main
+# Push to remote
 git push -u origin main
-\end{minted}
+\end{lstlisting}
 
-\subsection{Step 3: Create Workflow File}
+\section{Step 7: Test the Setup}
 
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Create workflow directory structure
-mkdir -p .github/workflows
+\begin{lstlisting}[language=bash]
+# Test backup script manually
+/root/backup-overleaf-projects.sh
 
-# Create workflow file
-touch .github/workflows/label-project.yml
+# Check log
+tail -50 /var/log/overleaf-backup.log
 
-# Add workflow YAML content (as shown in Section 3.1)
-\end{minted}
+# Verify files in backup directory
+ls -la /root/overleaf_backups/
 
-\subsection{Step 4: Update LaTeX Preamble}
+# Check GitHub Actions in GitHub repository Actions tab
+\end{lstlisting}
 
-Modifications to \texttt{groupAssignments.tex}:
+\section{Step 8: Monitoring Commands}
 
-\begin{enumerate}
-    \item Remove \texttt{pdfmark} from hyperref options
-    \item Change glossaries package: \texttt{\textbackslash usepackage[toc]\{glossaries\}}
-    \item Add version command: \texttt{\textbackslash newcommand\{\textbackslash gitversion\}\{Unknown\}}
-    \item Set header height: \texttt{\textbackslash setlength\{\textbackslash headheight\}\{15pt\}}
-    \item Add version to title page and header
-\end{enumerate}
+\begin{lstlisting}[language=bash]
+# Watch backup log in real-time
+tail -f /var/log/overleaf-backup.log
 
-\subsection{Step 5: Fix Glossary Issues}
+# Monitor cron execution
+grep CRON /var/log/syslog | tail -20
 
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Edit itGlossary.tex
-# Add missing glossary entry for 'cicd'
-\end{minted}
+# Check git status
+cd /root/overleaf_backups && git status
 
-Add to \texttt{itGlossary.tex}:
-\begin{minted}[breaklines,fontsize=\small]{latex}
-\newglossaryentry{cicd}{
-    name={CI/CD},
-    description={Continuous Integration and Continuous Deployment}
-}
-\end{minted}
+# View recent commits
+cd /root/overleaf_backups && git log --oneline -10
 
-\subsection{Step 6: Commit and Push Changes}
+# Check if .github folder is protected
+ls -la /root/overleaf_backups/.github/workflows/
+\end{lstlisting}
 
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Stage all changes
-git add .github/workflows/label-project.yml
-git add groupAssignments.tex
-git add itGlossary.tex
-
-# Commit changes
-git commit -m "Add GitHub Actions CI/CD for LaTeX compilation"
-
-# Push to trigger workflow
-git push origin main
-\end{minted}
-
-\subsection{Step 7: Monitor Workflow Execution}
+\section{Workflow Process}
 
 \begin{enumerate}
-    \item Navigate to GitHub repository
-    \item Click "Actions" tab
-    \item View real-time workflow execution
-    \item Wait for green checkmark (3-5 minutes)
+    \item Edit Overleaf document on DigitalOcean (http://devops-group14.app)
+    \item Cron job runs every 5 seconds:
+    \begin{itemize}
+        \item Pulls latest from GitHub
+        \item Syncs Overleaf files (excluding .github)
+        \item Commits changes
+        \item Pushes to GitHub
+    \end{itemize}
+    \item GitHub Actions triggers:
+    \begin{itemize}
+        \item Checks out repository
+        \item Installs TeX Live
+        \item Gets commit hash
+        \item Updates version in document
+        \item Compiles LaTeX (3 passes)
+        \item Creates PDF with version number
+        \item Saves to builds/ directory
+        \item Commits and pushes PDF back
+    \end{itemize}
 \end{enumerate}
 
-\subsection{Step 8: Access Compiled PDF}
+\section{Verification Checklist}
 
-\textbf{Method 1 - Workflow Artifacts:}
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Via GitHub web interface:
-# Actions → Select workflow run → Artifacts → Download "Compiled-PDF"
-\end{minted}
+\begin{itemize}
+    \item[$\checkmark$] Cron job running every 5 seconds
+    \item[$\checkmark$] Files syncing from Overleaf to GitHub
+    \item[$\checkmark$] .github folder protected from deletion
+    \item[$\checkmark$] GitHub Actions workflow executing on push
+    \item[$\checkmark$] PDF being compiled with commit hash
+    \item[$\checkmark$] PDF saved to builds/ directory
+    \item[$\checkmark$] All changes committed and pushed
+\end{itemize}
 
-\textbf{Method 2 - Repository Builds Directory:}
-\begin{minted}[breaklines,fontsize=\small]{bash}
-# Navigate to builds/ directory in repository
-# Access: builds/document_[commit-hash].pdf
-# Example: builds/document_f3f37c0.pdf
-\end{minted}
+\section{Troubleshooting Commands}
+
+\begin{lstlisting}[language=bash]
+# Check cron service
+sudo systemctl status cron
+
+# View full backup log
+cat /var/log/overleaf-backup.log
+
+# Test rsync without delete
+rsync -avn --exclude='.git' --exclude='.github' \
+  /root/sharelatex_data/data/compiles/68f9818f6cbab3ad67b265f7-68f14753eda193f7e7fa0355/ \
+  /root/overleaf_backups/
+
+# Check SSH connection to GitHub
+ssh -T git@github.com
+
+# Force manual sync
+cd /root/overleaf_backups && git pull && git push
+\end{lstlisting}
+
+\section{Project Structure}
+
+\begin{verbatim}
+/root/overleaf_backups/
+|-- .git/
+|-- .github/
+|   `-- workflows/
+|       `-- build.yml
+|-- .gitignore
+|-- groupAssignments.tex
+|-- [other .tex files]
+|-- png/
+|   `-- [images]
+`-- builds/
+    `-- document_[hash].pdf
+\end{verbatim}
+
+\end{document}
