@@ -675,20 +675,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
-! Misplaced alignment tab character &.
-<argument> ...numberline {6}Overleaf Compilation &
-                                                   Sync with GitHub}\Hy@tocl...
-l.146 ...lation & Sync with GitHub}{39}{chapter.6}
-                                                  %
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-)
+[5])
 \tf@toc=\write6
 \openout6 = `output.toc'.
 
@@ -834,7 +821,7 @@ Chapter 3.
 \pydata@fh@0=\write9
 \openout9 = `_78E6221F6393D1356681DB398F14CE6D.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251023033648Z 78E6221F6393D1356681D
+runsystem(latexminted config  --timestamp 20251023033653Z 78E6221F6393D1356681D
 B398F14CE6D)...executed safely (allowed).
 
 
@@ -2365,22 +2352,13 @@ L3 programming layer <2025-04-29>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `output.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `output.out':
-(rerunfilecheck)             Before: AC5421B9E10B04E81DAC5A0626F95EE4;19484
-(rerunfilecheck)             After:  9F868B0C7C4F0572ACAA19C3EE4DBC57;19499.
+Package rerunfilecheck Info: File `output.out' has not changed.
+(rerunfilecheck)             Checksum: 9F868B0C7C4F0572ACAA19C3EE4DBC57;19499.
  ) 
 Here is how much of TeX's memory you used:
  23935 strings out of 471528
  498047 string characters out of 5519234
- 1028111 words of memory out of 5000000
+ 1028113 words of memory out of 5000000
  49914 multiletter control sequences out of 15000+600000
  634025 words of font info for 66 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -2396,7 +2374,7 @@ texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on output.pdf (61 pages, 371555 bytes).
+Output written on output.pdf (61 pages, 371550 bytes).
 PDF statistics:
  1130 PDF objects out of 1200 (max. 8388607)
  1027 compressed objects within 11 object streams
