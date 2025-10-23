@@ -1,0 +1,61 @@
+name: Build LaTeX PDF
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Install TeX Live and Pygments
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full python3-pygments
+
+      - name: Get Git commit hash
+        run: echo "GIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Update version in groupAssignments.tex
+        run: |
+          sed -i "s/\\\\newcommand{\\\\gitversion}{Unknown}/\\\\newcommand{\\\\gitversion}{${GIT_HASH}}/" groupAssignments.tex
+          echo "Updated version to: ${GIT_HASH}"
+
+      - name: Compile LaTeX document
+        run: |
+          pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex
+          bibtex groupAssignments || true
+          makeindex groupAssignments.idx || true
+          pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex
+          pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Compiled-PDF
+          path: groupAssignments.pdf
+
+      - name: Commit PDF to repo
+        if: success()
+        env:
+          GIT_HASH: ${{ env.GIT_HASH }}
+        run: |
+          git config user.name "Badri-Narayanan"
+          git config user.email "badhrirajen@gmail.com"
+          mkdir -p builds
+          cp groupAssignments.pdf builds/document_${GIT_HASH}.pdf
+          git add builds/document_${GIT_HASH}.pdf
+          git commit -m "Auto-build PDF for commit ${GIT_HASH}" || echo "No changes to commit"
+          git push origin HEAD:main || echo "Push failed"

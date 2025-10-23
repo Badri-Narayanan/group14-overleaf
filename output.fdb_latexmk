@@ -1,0 +1,22 @@
+# Fdb version 4
+["pdflatex"] 1761182228.19718 "groupAssignments.tex" "output.pdf" "output" 1761182228.36567 2
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
+  "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty" 1738182759 5048 0270515b828149155424600fd2d58ac5 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/base/report.cls" 1738182759 23203 7ac64169eac711b8259b91f4833984f3 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo" 1738182759 8449 ffe4ba2166a344827c3a832d1d5e0a91 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty" 1717359999 2671 70891d50dac933918b827d326687c6e8 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty" 1730496337 14552 27664839421e418b87f56fa4c6f66b1a ""
+  "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
+  "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747657834 2217059 eac4396b856a3e52cba2a9adaf004475 ""
+  "/usr/local/texlive/2025/texmf.cnf" 1747657802 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "booktabs.sty" 0 -1 0 ""
+  "groupAssignments.tex" 1761182227.71128 2739 e84242a046af6c46387ba97d443f141a ""
+  "output.aux" 1761182098.35366 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  (generated)
+  "output.aux"
+  "output.log"
+  "output.pdf"
+  (rewritten before read)

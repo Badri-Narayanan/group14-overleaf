@@ -1,0 +1,371 @@
+\chapter{Overleaf CI with GitHub Action}
+\label{chap:overleafCI}
+
+\section{Introduction}
+
+This chapter documents the implementation of a CI/CD\index{CI/CD} pipeline using GitHub Actions\index{GitHub Actions} to automatically compile LaTeX\index{LaTeX} documents, inject version information, and archive compiled PDFs.
+
+\section{Project Setup from Overleaf}
+
+\subsection{Exporting Overleaf Project}
+
+The collaborative LaTeX project was initially developed on Overleaf\index{Overleaf}. The project was exported and prepared for Git version control\index{version control}:
+
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Download project from Overleaf as ZIP file
+# File downloaded: overleaf-project.zip
+
+# Extract the ZIP file
+unzip overleaf-project.zip -d latex-project
+cd latex-project
+
+# Initialize Git repository
+git init
+
+# Create initial commit
+git add .
+git commit -m "Initial commit: Import from Overleaf"
+
+# Create GitHub repository and link
+git remote add origin https://github.com/Badri-Narayanan/overleaf-local-grp14.git
+git branch -M main
+git push -u origin main
+\end{minted}
+
+\subsection{Project Structure}
+
+After extraction, the project contains:
+
+\begin{minted}[breaklines,fontsize=\small]{text}
+latex-project/
+├── groupAssignments.tex        # Main document
+├── itGlossary.tex              # Glossary definitions
+├── bibfile.bib                 # Bibliography
+├── history.tex                 # Revision history
+├── itPasswords.tex             # Service credentials
+├── linuxCommands.tex           # Chapter 1
+├── projectProposal.tex         # Chapter 2
+├── awsDeployment.tex           # Chapter 3
+├── digitalOceanSetup.tex       # Chapter 4
+├── overleafDeployment.tex      # Chapter 5
+└── png/                        # Images directory
+\end{minted}
+
+\section{GitHub Actions Workflow Setup}
+
+\subsection{Workflow File Creation}
+
+Create \texttt{.github/workflows/label-project.yml}\index{workflow file}:
+
+\begin{minted}[breaklines,fontsize=\small]{yaml}
+name: Build LaTeX PDF
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Install TeX Live and Pygments
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full python3-pygments
+
+      - name: Get Git commit hash
+        run: echo "GIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Update version in groupAssignments.tex
+        run: |
+          sed -i "s/\\\\newcommand{\\\\gitversion}{Unknown}/\\\\newcommand{\\\\gitversion}{${GIT_HASH}}/" groupAssignments.tex
+          echo "Updated version to: ${GIT_HASH}"
+          grep "gitversion" groupAssignments.tex
+
+      - name: Compile LaTeX document (Pass 1)
+        run: |
+          pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex || true
+
+      - name: Run BibTeX
+        run: |
+          bibtex groupAssignments || true
+
+      - name: Run MakeIndex
+        run: |
+          makeindex groupAssignments.idx || true
+
+      - name: Compile LaTeX document (Pass 2)
+        run: |
+          pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex || true
+
+      - name: Compile LaTeX document (Pass 3 - Final)
+        run: |
+          pdflatex -shell-escape -interaction=nonstopmode groupAssignments.tex || true
+
+      - name: Check if PDF was generated
+        run: |
+          if [ -f "groupAssignments.pdf" ]; then
+            echo "PDF generated successfully!"
+            ls -lh groupAssignments.pdf
+          else
+            echo "ERROR: PDF was not generated!"
+            exit 1
+          fi
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Compiled-PDF
+          path: groupAssignments.pdf
+
+      - name: Commit PDF to repo
+        if: success()
+        env:
+          GIT_HASH: ${{ env.GIT_HASH }}
+        run: |
+          git config user.name "Badri-Narayanan"
+          git config user.email "badhrirajen@gmail.com"
+          mkdir -p builds
+          cp groupAssignments.pdf builds/document_${GIT_HASH}.pdf
+          git add builds/document_${GIT_HASH}.pdf
+          git commit -m "Auto-build PDF for commit ${GIT_HASH}" || echo "No changes to commit"
+          git push origin HEAD:main || echo "Push failed"
+\end{minted}
+
+\subsection{Key Workflow Components}
+
+\textbf{Critical Flags:}
+\begin{itemize}
+    \item \texttt{-shell-escape}: Required for minted package\index{shell-escape}
+    \item \texttt{-interaction=nonstopmode}: Non-interactive compilation
+    \item \texttt{|| true}: Continue on warnings
+\end{itemize}
+
+\textbf{Dependencies:}
+\begin{itemize}
+    \item \texttt{texlive-full}: Complete LaTeX distribution
+    \item \texttt{python3-pygments}: Required for minted syntax highlighting\index{Pygments}
+\end{itemize}
+
+\section{LaTeX Document Configuration}
+
+\subsection{Preamble Setup}
+
+Modify \texttt{groupAssignments.tex} preamble:
+
+\begin{minted}[breaklines,fontsize=\small]{latex}
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{minted}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{makeidx}
+
+% Hyperref configuration (removed pdfmark option)
+\usepackage[
+breaklinks=true, 
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+menucolor=black,
+urlcolor=blue
+]{hyperref}
+
+% Glossaries configuration (removed unsupported options)
+\usepackage[toc]{glossaries}
+
+% Load glossary definitions
+\input{itGlossary.tex}
+\makenoidxglossaries
+
+% Make index
+\makeindex
+
+% Git version command - updated by GitHub Actions
+\newcommand{\gitversion}{Unknown}
+
+% Header/Footer setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[L]{v\gitversion}
+\fancyhead[C]{Chapter \thechapter \hspace{1em} \copyright Stevens -- \today \hspace{1em} -- Do Not Distribute!}
+\setlength{\headheight}{15pt}
+\renewcommand{\headrulewidth}{0pt}
+\end{minted}
+
+\subsection{Title Page with Version}
+
+\begin{minted}[breaklines,fontsize=\small]{latex}
+\begin{titlepage}
+    \centering
+    \vspace*{5cm}
+    
+    {\Huge\bfseries DevOps - Group 14 Assignments\par}
+    
+    \vspace{0.5cm}
+    {\large Document Version: \gitversion\par}
+    
+    \vspace{1cm}
+    
+    {\Large by\par}
+    
+    \vspace{0.5cm}
+    
+    {\Large
+    Andre Santiago-Neyra\\
+    Badri Narayanan Rajendran\\
+    }
+    
+    \vspace{1cm}
+    
+    {\large Stevens.edu\par}
+    
+    \vfill
+    
+    {\large October 2, 2025\par}
+    
+\end{titlepage}
+\end{minted}
+
+\section{Glossary Configuration}
+
+\subsection{Adding Glossary Entries}
+
+In \texttt{itGlossary.tex}, add required entries:
+
+\begin{minted}[breaklines,fontsize=\small]{latex}
+\newglossaryentry{cicd}{
+    name={CI/CD},
+    description={Continuous Integration and Continuous Deployment - automated software development practices for frequent code integration and deployment}
+}
+\end{minted}
+
+\subsection{Using Glossary Entries}
+
+In document text:
+
+\begin{minted}[breaklines,fontsize=\small]{latex}
+... deployment processes using two \gls{cicd} tools: Jenkins and GitHub Actions...
+\end{minted}
+
+\section{Implementation Steps}
+
+\subsection{Step 1: Export and Setup from Overleaf}
+
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Download ZIP from Overleaf
+# Extract and initialize repository
+unzip overleaf-project.zip -d latex-project
+cd latex-project
+git init
+git add .
+git commit -m "Initial commit from Overleaf"
+\end{minted}
+
+\subsection{Step 2: Create GitHub Repository}
+
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Create repository on GitHub (via web interface)
+# Link local repository to GitHub
+git remote add origin https://github.com/Badri-Narayanan/overleaf-local-grp14.git
+git branch -M main
+git push -u origin main
+\end{minted}
+
+\subsection{Step 3: Create Workflow File}
+
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Create workflow directory structure
+mkdir -p .github/workflows
+
+# Create workflow file
+touch .github/workflows/label-project.yml
+
+# Add workflow YAML content (as shown in Section 3.1)
+\end{minted}
+
+\subsection{Step 4: Update LaTeX Preamble}
+
+Modifications to \texttt{groupAssignments.tex}:
+
+\begin{enumerate}
+    \item Remove \texttt{pdfmark} from hyperref options
+    \item Change glossaries package: \texttt{\textbackslash usepackage[toc]\{glossaries\}}
+    \item Add version command: \texttt{\textbackslash newcommand\{\textbackslash gitversion\}\{Unknown\}}
+    \item Set header height: \texttt{\textbackslash setlength\{\textbackslash headheight\}\{15pt\}}
+    \item Add version to title page and header
+\end{enumerate}
+
+\subsection{Step 5: Fix Glossary Issues}
+
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Edit itGlossary.tex
+# Add missing glossary entry for 'cicd'
+\end{minted}
+
+Add to \texttt{itGlossary.tex}:
+\begin{minted}[breaklines,fontsize=\small]{latex}
+\newglossaryentry{cicd}{
+    name={CI/CD},
+    description={Continuous Integration and Continuous Deployment}
+}
+\end{minted}
+
+\subsection{Step 6: Commit and Push Changes}
+
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Stage all changes
+git add .github/workflows/label-project.yml
+git add groupAssignments.tex
+git add itGlossary.tex
+
+# Commit changes
+git commit -m "Add GitHub Actions CI/CD for LaTeX compilation"
+
+# Push to trigger workflow
+git push origin main
+\end{minted}
+
+\subsection{Step 7: Monitor Workflow Execution}
+
+\begin{enumerate}
+    \item Navigate to GitHub repository
+    \item Click "Actions" tab
+    \item View real-time workflow execution
+    \item Wait for green checkmark (3-5 minutes)
+\end{enumerate}
+
+\subsection{Step 8: Access Compiled PDF}
+
+\textbf{Method 1 - Workflow Artifacts:}
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Via GitHub web interface:
+# Actions → Select workflow run → Artifacts → Download "Compiled-PDF"
+\end{minted}
+
+\textbf{Method 2 - Repository Builds Directory:}
+\begin{minted}[breaklines,fontsize=\small]{bash}
+# Navigate to builds/ directory in repository
+# Access: builds/document_[commit-hash].pdf
+# Example: builds/document_f3f37c0.pdf
+\end{minted}
