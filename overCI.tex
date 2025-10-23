@@ -1,7 +1,5 @@
-\title{Overleaf CI with GitHub}
-\label{chap::overleafCI}
-
-\begin{document}
+\chapter{Overleaf Compilation & Sync with GitHub}
+\label{chap:overleafCI}
 
 \section{System Overview}
 
@@ -15,13 +13,13 @@
 
 \section{Step 1: SSH into DigitalOcean Droplet}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 ssh root@142.93.207.133
-\end{lstlisting}
+\end{minted}
 
 \section{Step 2: Create Backup Directory and Initialize Git}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Create backup directory
 mkdir -p /root/overleaf_backups
 cd /root/overleaf_backups
@@ -39,7 +37,7 @@ ssh-keygen -t ed25519 -C "badhrirajen@gmail.com" -f /root/.ssh/id_ed25519 -N ""
 
 # Display public key (add this to GitHub)
 cat /root/.ssh/id_ed25519.pub
-\end{lstlisting}
+\end{minted}
 
 \textbf{Add SSH key to GitHub:}
 \begin{enumerate}
@@ -48,23 +46,23 @@ cat /root/.ssh/id_ed25519.pub
     \item Paste and save
 \end{enumerate}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Add GitHub remote (replace with your repo URL)
 git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 
 # Test connection
 ssh -T git@github.com
-\end{lstlisting}
+\end{minted}
 
 \section{Step 3: Create Backup Script}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 nano /root/backup-overleaf-projects.sh
-\end{lstlisting}
+\end{minted}
 
 \textbf{Script Content:}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 #!/bin/bash
 
 # Configuration
@@ -289,22 +287,22 @@ fi
 
 log_message "========== Backup process completed successfully =========="
 exit 0
-\end{lstlisting}
+\end{minted}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Make script executable
 chmod +x /root/backup-overleaf-projects.sh
-\end{lstlisting}
+\end{minted}
 
 \section{Step 4: Setup Cron Job (Every 5 Seconds)}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 crontab -e
-\end{lstlisting}
+\end{minted}
 
 \textbf{Add these lines:}
 
-\begin{lstlisting}
+\begin{minted}{text}
 * * * * * /root/backup-overleaf-projects.sh
 * * * * * sleep 5; /root/backup-overleaf-projects.sh
 * * * * * sleep 10; /root/backup-overleaf-projects.sh
@@ -317,28 +315,28 @@ crontab -e
 * * * * * sleep 45; /root/backup-overleaf-projects.sh
 * * * * * sleep 50; /root/backup-overleaf-projects.sh
 * * * * * sleep 55; /root/backup-overleaf-projects.sh
-\end{lstlisting}
+\end{minted}
 
 \textbf{Verify cron is running:}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 sudo systemctl status cron
 crontab -l
-\end{lstlisting}
+\end{minted}
 
 \section{Step 5: Create GitHub Actions Workflow}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Create workflow directory
 mkdir -p /root/overleaf_backups/.github/workflows
 
 # Create workflow file
 nano /root/overleaf_backups/.github/workflows/build.yml
-\end{lstlisting}
+\end{minted}
 
 \textbf{Workflow Content (YAML):}
 
-\begin{lstlisting}[language=yaml]
+\begin{minted}{yaml}
 name: Build LaTeX PDF
 permissions:
   contents: write
@@ -404,13 +402,13 @@ jobs:
           mkdir -p builds
           cp groupAssignments.pdf builds/document_${GIT_HASH}.pdf
           git add builds/document_${GIT_HASH}.pdf
-          git commit -m "Auto-build PDF for commit ${GIT_HASH}" || echo "No changes to commit"
+          git commit -m "Auto-build PDF for commit ${GIT_HASH}" || echo "No changes"
           git push origin HEAD:main || echo "Push failed"
-\end{lstlisting}
+\end{minted}
 
 \section{Step 6: Initial Commit and Push}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 cd /root/overleaf_backups
 
 # Add .gitignore
@@ -438,11 +436,11 @@ git commit -m "Initial commit: Overleaf project setup"
 
 # Push to remote
 git push -u origin main
-\end{lstlisting}
+\end{minted}
 
 \section{Step 7: Test the Setup}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Test backup script manually
 /root/backup-overleaf-projects.sh
 
@@ -451,13 +449,11 @@ tail -50 /var/log/overleaf-backup.log
 
 # Verify files in backup directory
 ls -la /root/overleaf_backups/
-
-# Check GitHub Actions in GitHub repository Actions tab
-\end{lstlisting}
+\end{minted}
 
 \section{Step 8: Monitoring Commands}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Watch backup log in real-time
 tail -f /var/log/overleaf-backup.log
 
@@ -472,7 +468,7 @@ cd /root/overleaf_backups && git log --oneline -10
 
 # Check if .github folder is protected
 ls -la /root/overleaf_backups/.github/workflows/
-\end{lstlisting}
+\end{minted}
 
 \section{Workflow Process}
 
@@ -512,7 +508,7 @@ ls -la /root/overleaf_backups/.github/workflows/
 
 \section{Troubleshooting Commands}
 
-\begin{lstlisting}[language=bash]
+\begin{minted}{bash}
 # Check cron service
 sudo systemctl status cron
 
@@ -529,11 +525,11 @@ ssh -T git@github.com
 
 # Force manual sync
 cd /root/overleaf_backups && git pull && git push
-\end{lstlisting}
+\end{minted}
 
 \section{Project Structure}
 
-\begin{verbatim}
+\begin{minted}{text}
 /root/overleaf_backups/
 |-- .git/
 |-- .github/
@@ -546,6 +542,4 @@ cd /root/overleaf_backups && git pull && git push
 |   `-- [images]
 `-- builds/
     `-- document_[hash].pdf
-\end{verbatim}
-
-\end{document}
+\end{minted}
