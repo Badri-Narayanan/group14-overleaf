@@ -2345,4 +2345,68 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [49]
 
 Package glossaries Info: Preparing to sort glossary `main' (total number of
-(glossaries)       
+(glossaries)             referenced entries: 1)
+
+
+
+[50
+
+
+
+
+
+] (./output.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 21.
+
+)
+
+[51
+
+
+] (./output.ind
+
+
+
+[52
+
+
+
+]) (./output.aux (./linuxCommands.aux) (./projectProposal.aux) (./awsDeployment
+.aux) (./digitalOceanSetup.aux) (./overleafDeployment.aux) (./overCI.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-29>
+ ***********
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `output.out' has not changed.
+(rerunfilecheck)             Checksum: AC5421B9E10B04E81DAC5A0626F95EE4;19484.
+ ) 
+Here is how much of TeX's memory you used:
+ 23935 strings out of 471528
+ 498047 string characters out of 5519234
+ 1028111 words of memory out of 5000000
+ 49914 multiletter control sequences out of 15000+600000
+ 634025 words of font info for 66 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 85i,12n,93p,2484b,1246s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </var/lib/overleaf/tmp/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1200.600pk>
+ </var/lib/overleaf/tmp/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on output.pdf (61 pages, 371557 bytes).
+PDF statistics:
+ 1130 PDF objects out of 1200 (max. 8388607)
+ 1027 compressed objects within 11 object streams
+ 317 named destinations out of 1000 (max. 500000)
+ 887 words of extra memory for PDF output out of 10000 (max. 10000000)
+
