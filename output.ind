@@ -1,0 +1,80 @@
+\begin{theindex}
+
+  \item awk command, \hyperpage{3}
+  \item AWS, \hyperpage{10}
+  \item AWS EC2, \hyperpage{8}
+
+  \indexspace
+
+  \item Bugzilla, \hyperpage{17}
+
+  \indexspace
+
+  \item chmod command, \hyperpage{3}
+  \item CI/CD, \hyperpage{39}
+
+  \indexspace
+
+  \item deployment pipeline, \hyperpage{8}
+  \item DigitalOcean, \hyperpage{17}
+  \item Docker, \hyperpage{8}
+
+  \indexspace
+
+  \item ECR, \hyperpage{10}
+
+  \indexspace
+
+  \item find command, \hyperpage{4}
+
+  \indexspace
+
+  \item GitHub Actions, \hyperpage{39}
+  \item Github Actions, \hyperpage{8}
+  \item grep command, \hyperpage{2}
+
+  \indexspace
+
+  \item Jenkins, \hyperpage{8}
+
+  \indexspace
+
+  \item LaTeX, \hyperpage{14}, \hyperpage{39}
+  \item Linux commands, \hyperpage{1}
+  \item ls command, \hyperpage{1}
+
+  \indexspace
+
+  \item MariaDB, \hyperpage{17}
+
+  \indexspace
+
+  \item netstat command, \hyperpage{5}
+
+  \indexspace
+
+  \item Overleaf, \hyperpage{39}
+
+  \indexspace
+
+  \item ps command, \hyperpage{4}
+  \item pwd command, \hyperpage{1}
+  \item Pygments, \hyperpage{42}
+
+  \indexspace
+
+  \item shell-escape, \hyperpage{42}
+
+  \indexspace
+
+  \item tar command, \hyperpage{5}
+
+  \indexspace
+
+  \item version control, \hyperpage{39}
+
+  \indexspace
+
+  \item workflow file, \hyperpage{40}
+
+\end{theindex}
