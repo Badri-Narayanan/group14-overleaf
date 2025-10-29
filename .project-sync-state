@@ -21,6 +21,7 @@ overCI.tex
 overleafDeployment.tex
 projectProposal.tex
 prologue.tex
+prometheusAndGrafana.tex
 eps/UseCases/MyUseCaseDiagram.eps
 eps/UseCases/dsnHelloWorld.eps
 eps/UseCases/dsnMyDiagram.eps
@@ -34,5 +35,10 @@ png/aws-screenshot-4.jpeg
 png/aws-screenshot-5.jpeg
 png/aws-screenshot-6.jpeg
 png/stvAgileProcess.png
+png/PrometheusAndGrafana/grafana-dashboard.png
+png/PrometheusAndGrafana/node-exporter-home.png
+png/PrometheusAndGrafana/prometheus-dashboard-2.png
+png/PrometheusAndGrafana/prometheus-dashboard.png
+png/PrometheusAndGrafana/prometheus-status.png
 visio/UseCases/dsnSampleUseCase.vsd
-stateHash:0bbda7d15292c210f0ea7da4d273b69352f6851f
+stateHash:e77fafdc8d9e24b09bbfee29bc210e713ddde754
