@@ -634,957 +634,515 @@ l.101 \clearpage
 LaTeX Warning: Reference `Table::UpdateHistory' on page ii undefined on input l
 ine 12.
 
-! Extra }, or forgotten \endgroup.
-\@endpbox ...\@arstrutbox \color@endgroup \egroup 
-                                                  \the \LT@p@ftn \global \LT...
-l.24 \item Assignment 8: Setting up Prometheus &
-                                                 Grafana Dashboards and Node...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.24 \item Assignment 8: Setting up Prometheus &
-                                                 Grafana Dashboards and Node...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.24 \item Assignment 8: Setting up Prometheus &
-                                                 Grafana Dashboards and Node...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.24 \item Assignment 8: Setting up Prometheus &
-                                                 Grafana Dashboards and Node...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
 
 LaTeX Warning: Reference `chap:prometheusAndGrafana' on page ii undefined on in
 put line 24.
 
-! Undefined control sequence.
-\enit@enditemize ->\enit@after 
-                               \endlist \ifx \enit@series \relax \else \ifnu...
-l.25 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+
+LaTeX Warning: Reference `chap:overleafCI' on page ii undefined on input line 2
+9.
 
 
-! LaTeX Error: Not allowed in LR mode.
+LaTeX Warning: Reference `chap:overleafDeployment' on page ii undefined on inpu
+t line 34.
 
-See the LaTeX manual or LaTeX Companion for explanation.
+
+LaTeX Warning: Reference `chap:digitalocean' on page ii undefined on input line
+ 39.
+
+
+LaTeX Warning: Reference `chap:aws' on page ii undefined on input line 44.
+
+
+LaTeX Warning: Reference `chap:proposal' on page ii undefined on input line 49.
+
+
+
+LaTeX Warning: Reference `chap:linux' on page ii undefined on input line 54.
+
+
+Overfull \hbox (17.49368pt too wide) in alignment at lines 21--62
+ [] [] 
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 62.
+
+)
+
+[2
+
+] (./itPasswords.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/12 MariaDB Bugzilla
+ []
+
+)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3
+
+] (./output.toc
+
+[4
+
+]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5])
+\tf@toc=\write6
+\openout6 = `output.toc'.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6] (./output.lot)
+\tf@lot=\write7
+\openout7 = `output.lot'.
+
+
+
+[7
+
+] (./output.lof)
+\tf@lof=\write8
+\openout8 = `output.lof'.
+
+
+
+[8
+
+]
+\openout2 = `linuxCommands.aux'.
+
+(./linuxCommands.tex
+Chapter 1.
+
+
+[1
+
+
+
+]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2]
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+123.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 123.
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 123.
+
+
+Overfull \hbox (5.43477pt too wide) in paragraph at lines 174--176
+[]\OT1/cmr/m/n/12 Give group ex-e-cute per-mis-sion to \OT1/cmtt/m/n/12 src/lib
+ \OT1/cmr/m/n/12 re-cur-sively with-out touch-ing oth-ers/owner
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+Overfull \hbox (39.84875pt too wide) in paragraph at lines 355--356
+[]\OT1/cmr/m/n/12 Input: \OT1/cmtt/m/n/12 for f in src/*.txt; do echo "\TS1/cmt
+t/m/n/12 $\OT1/cmtt/m/n/12 f:\TS1/cmtt/m/n/12 $\OT1/cmtt/m/n/12 (wc -l < "\TS1/
+cmtt/m/n/12 $\OT1/cmtt/m/n/12 f"):\TS1/cmtt/m/n/12 $\OT1/cmtt/m/n/12 (wc -w < "
+\TS1/cmtt/m/n/12 $\OT1/cmtt/m/n/12 f")";
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7]
+\openout2 = `projectProposal.aux'.
+
+(./projectProposal.tex
+Chapter 2.
+
+
+[8
+
+
+
+
+])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9]
+\openout2 = `awsDeployment.aux'.
+
+(./awsDeployment.tex
+Chapter 3.
+\pydata@fh@0=\write9
+\openout9 = `_78E6221F6393D1356681DB398F14CE6D.data.minted'.
+
+runsystem(latexminted config  --timestamp 20251029232959Z 78E6221F6393D1356681D
+B398F14CE6D)...executed safely (allowed).
+
+
+! Package minted Error: minted v3+ executable is not installed, is not added to
+ PATH, or is not permitted with restricted shell escape; or MiKTeX is being use
+d with -aux-directory or -output-directory without setting a TEXMF_OUTPUT_DIREC
+TORY environment variable.
+
+See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \end{itemize}
-                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.20 \end{minted}
+                 
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
 
 
-! LaTeX Error: Not allowed in LR mode.
+! Package minted Error: Missing definition for highlighting style "default" (mi
+nted executable is unavailable or disabled); attempting to substitute fallback 
+style.
 
-See the LaTeX manual or LaTeX Companion for explanation.
+See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \end{itemize}
-                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.25 \end{itemize}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.25 \end{itemize}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.25 \end{itemize}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
-                  
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
+l.20 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+
+[10
+
+
+
+
+]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 \end{minted}
+                 
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \end{minted}
+                  
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \end{minted}
                   
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
+(That was another \errmessage.)
+
+<png/aws-screenshot-1.jpeg, id=370, 1284.8pt x 337.26pt>
+File: png/aws-screenshot-1.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-1.jpeg>
+Package pdftex.def Info: png/aws-screenshot-1.jpeg  used on input line 124.
+(pdftex.def)             Requested size: 217.42265pt x 57.07098pt.
+<png/aws-screenshot-2.jpeg, id=371, 1284.8pt x 89.33376pt>
+File: png/aws-screenshot-2.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-2.jpeg>
+Package pdftex.def Info: png/aws-screenshot-2.jpeg  used on input line 131.
+(pdftex.def)             Requested size: 217.42265pt x 15.117pt.
+<png/aws-screenshot-3.jpeg, id=372, 1284.8pt x 508.90125pt>
+File: png/aws-screenshot-3.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-3.jpeg>
+Package pdftex.def Info: png/aws-screenshot-3.jpeg  used on input line 141.
+(pdftex.def)             Requested size: 217.42265pt x 86.11604pt.
+<png/aws-screenshot-4.jpeg, id=373, 1284.8pt x 468.75125pt>
+File: png/aws-screenshot-4.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-4.jpeg>
+Package pdftex.def Info: png/aws-screenshot-4.jpeg  used on input line 148.
+(pdftex.def)             Requested size: 217.42265pt x 79.32187pt.
+<png/aws-screenshot-5.jpeg, id=374, 1284.8pt x 501.875pt>
+File: png/aws-screenshot-5.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-5.jpeg>
+Package pdftex.def Info: png/aws-screenshot-5.jpeg  used on input line 158.
+(pdftex.def)             Requested size: 217.42265pt x 84.92706pt.
+<png/aws-screenshot-6.jpeg, id=375, 1284.8pt x 476.78125pt>
+File: png/aws-screenshot-6.jpeg Graphic file (type jpg)
+<use png/aws-screenshot-6.jpeg>
+Package pdftex.def Info: png/aws-screenshot-6.jpeg  used on input line 165.
+(pdftex.def)             Requested size: 217.42265pt x 80.68071pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12 <./png/aws-screenshot-1.jpeg> <./png/aws-screenshot-2.jpeg> <./png/aws-scre
+enshot-3.jpeg> <./png/aws-screenshot-4.jpeg> <./png/aws-screenshot-5.jpeg> <./p
+ng/aws-screenshot-6.jpeg>]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.207 \end{minted}
                   
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.234 \end{minted}
                   
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.285 \end{minted}
                   
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 \end{minted}
                   
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.25 \end{itemize}
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 \end{minted}
                   
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.25 \end{itemize}
+(That was another \errmessage.)
+
+
+! Package minted Error: Cannot highlight code (minted executable is unavailable
+ or disabled); attempting to typeset without highlighting.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 \end{minted}
                   
-(That makes 100 errors; please try again.) 
-Here is how much of TeX's memory you used:
- 22383 strings out of 471528
- 459109 string characters out of 5519234
- 1005117 words of memory out of 5000000
- 48754 multiletter control sequences out of 15000+600000
- 629277 words of font info for 48 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 85i,6n,93p,2484b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-!  ==> Fatal error occurred, no output PDF file produced!
+(That was another \errmessage.)
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make
