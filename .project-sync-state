@@ -22,6 +22,7 @@ overleafDeployment.tex
 projectProposal.tex
 prologue.tex
 prometheusAndGrafana.tex
+loadBalancerAndVirtualHost.tex
 eps/UseCases/MyUseCaseDiagram.eps
 eps/UseCases/dsnHelloWorld.eps
 eps/UseCases/dsnMyDiagram.eps
@@ -41,4 +42,4 @@ png/PrometheusAndGrafana/prometheus-dashboard-2.png
 png/PrometheusAndGrafana/prometheus-dashboard.png
 png/PrometheusAndGrafana/prometheus-status.png
 visio/UseCases/dsnSampleUseCase.vsd
-stateHash:8cf80ca8ce6093570c0d8ce2fc25261cae051a00
+stateHash:1d3d5aa91090e7683158ea109cc4b61e9c1fa9d5

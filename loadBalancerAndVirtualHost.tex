@@ -1,0 +1,254 @@
+\documentclass[12pt]{report}
+\usepackage{minted}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\setstretch{1.15}
+
+\begin{document}
+
+\chapter{Load Balancer and Virtual Host Setup}
+
+% =========================================================
+\section*{A — Project: Load Balancer}
+
+\subsection*{File Structure}
+\begin{minted}[fontsize=\small]{text}
+load-balanced-app/
+├── docker-compose.yml
+├── nginx/
+│   └── nginx.conf
+├── web1/
+│   └── index.html
+└── web2/
+    └── index.html
+\end{minted}
+
+\subsection*{File Contents}
+
+\noindent\textbf{web1/index.html}
+\begin{minted}[fontsize=\small]{html}
+<h1>Hello from Web 1</h1>
+\end{minted}
+
+\noindent\textbf{web2/index.html}
+\begin{minted}[fontsize=\small]{html}
+<h1>Hello from Web 2</h1>
+\end{minted}
+
+\noindent\textbf{nginx/nginx.conf}
+\begin{minted}[fontsize=\small]{nginx}
+events {}
+
+http {
+    upstream backend {
+        server web1:80;
+        server web2:80;
+    }
+
+    server {
+        listen 80;
+
+        location / {
+            proxy_pass http://backend;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+}
+\end{minted}
+
+\noindent\textbf{docker-compose.yml}
+\begin{minted}[fontsize=\small]{yaml}
+version: '3'
+
+services:
+  web1:
+    image: nginx
+    container_name: web1
+    volumes:
+      - ./web1:/usr/share/nginx/html:ro
+
+  web2:
+    image: nginx
+    container_name: web2
+    volumes:
+      - ./web2:/usr/share/nginx/html:ro
+
+  loadbalancer:
+    image: nginx
+    container_name: loadbalancer
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web1
+      - web2
+\end{minted}
+
+\subsection*{Steps Executed}
+\begin{minted}[fontsize=\small]{bash}
+cd /path/to/load-balanced-app
+docker-compose up -d --build
+docker ps
+# verify containers: web1, web2, loadbalancer
+
+# local browser test:
+# open http://localhost:8080 and refresh to see alternating servers
+
+docker-compose down
+\end{minted}
+
+% =========================================================
+\section*{B — Project: Virtual Host (Name-Based)}
+
+\subsection*{File Structure}
+\begin{minted}[fontsize=\small]{text}
+virtual-hosts/
+├── docker-compose.yml
+├── nginx/
+│   └── nginx.conf
+├── web1/
+│   └── index.html
+└── web2/
+    └── index.html
+\end{minted}
+
+\subsection*{File Contents}
+
+\noindent\textbf{web1/index.html}
+\begin{minted}[fontsize=\small]{html}
+<h1>This is Web 1 Virtual Host</h1>
+\end{minted}
+
+\noindent\textbf{web2/index.html}
+\begin{minted}[fontsize=\small]{html}
+<h1>This is Web 2 Virtual Host</h1>
+\end{minted}
+
+\noindent\textbf{nginx/nginx.conf}
+\begin{minted}[fontsize=\small]{nginx}
+events {}
+
+http {
+    server {
+        listen 80;
+        server_name web1.domain.com;
+
+        location / {
+            proxy_pass http://web1:80;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+
+    server {
+        listen 80;
+        server_name web2.domain.com;
+
+        location / {
+            proxy_pass http://web2:80;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+}
+\end{minted}
+
+\noindent\textbf{docker-compose.yml}
+\begin{minted}[fontsize=\small]{yaml}
+version: '3'
+
+services:
+  web1:
+    image: nginx
+    container_name: vh_web1
+    volumes:
+      - ./web1:/usr/share/nginx/html:ro
+
+  web2:
+    image: nginx
+    container_name: vh_web2
+    volumes:
+      - ./web2:/usr/share/nginx/html:ro
+
+  proxy:
+    image: nginx
+    container_name: vh_proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web1
+      - web2
+\end{minted}
+
+\subsection*{Steps Executed}
+\begin{minted}[fontsize=\small]{bash}
+cd /path/to/virtual-hosts
+docker-compose up -d --build
+docker ps
+# verify containers: vh_web1, vh_web2, vh_proxy
+
+curl -H "Host: web1.domain.com" http://localhost
+curl -H "Host: web2.domain.com" http://localhost
+
+docker-compose down
+\end{minted}
+
+% =========================================================
+\section*{C — Local DNS (Simulated Domains)}
+
+\subsection*{Windows Hosts File Configuration}
+\begin{minted}[fontsize=\small]{text}
+C:\Windows\System32\drivers\etc\hosts
+\end{minted}
+
+\begin{minted}[fontsize=\small]{text}
+203.0.113.42 web1.domain.com
+203.0.113.42 web2.domain.com
+\end{minted}
+
+\begin{minted}[fontsize=\small]{bash}
+ipconfig /flushdns
+\end{minted}
+
+Open in browser:
+\begin{itemize}
+    \item http://web1.domain.com
+    \item http://web2.domain.com
+\end{itemize}
+
+\subsection*{Linux / Unix Hosts File Configuration}
+\begin{minted}[fontsize=\small]{bash}
+sudo nano /etc/hosts
+\end{minted}
+
+Add:
+\begin{minted}[fontsize=\small]{text}
+203.0.113.42 web1.domain.com
+203.0.113.42 web2.domain.com
+\end{minted}
+
+Save and apply:
+\begin{minted}[fontsize=\small]{bash}
+sudo systemctl restart NetworkManager
+# or
+sudo dscacheutil -flushcache  # macOS
+\end{minted}
+
+Test:
+\begin{minted}[fontsize=\small]{bash}
+ping web1.domain.com
+ping web2.domain.com
+\end{minted}
+
+Open in browser:
+\begin{itemize}
+    \item http://web1.domain.com
+    \item http://web2.domain.com
+\end{itemize}
+
+\end{document}
