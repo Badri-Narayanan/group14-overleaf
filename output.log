@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  12 NOV 2025 20:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  12 NOV 2025 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,7 +831,7 @@ Chapter 3.
 \pydata@fh@0=\write9
 \openout9 = `_78E6221F6393D1356681DB398F14CE6D.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251112203732Z 78E6221F6393D1356681D
+runsystem(latexminted config  --timestamp 20251112205054Z 78E6221F6393D1356681D
 B398F14CE6D)...executed safely (allowed).
 
 
@@ -4070,24 +4070,19 @@ File: png/loadBalancerAndVirtualHost/LB-1.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/LB-1.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/LB-1.png  used on input
  line 252.
-(pdftex.def)             Requested size: 362.37569pt x 208.50058pt.
+(pdftex.def)             Requested size: 247.24837pt x 142.26378pt.
 <png/loadBalancerAndVirtualHost/LB-2.png, id=1398, 1062.97125pt x 612.03656pt>
 File: png/loadBalancerAndVirtualHost/LB-2.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/LB-2.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/LB-2.png  used on input
  line 259.
-(pdftex.def)             Requested size: 339.72592pt x 195.60355pt.
+(pdftex.def)             Requested size: 247.07338pt x 142.26378pt.
 <png/loadBalancerAndVirtualHost/VH-1.png, id=1399, 1071.25218pt x 612.03656pt>
 File: png/loadBalancerAndVirtualHost/VH-1.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/VH-1.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/VH-1.png  used on input
  line 266.
-(pdftex.def)             Requested size: 964.11807pt x 550.82782pt.
-
-Overfull \hbox (511.15018pt too wide) in paragraph at lines 266--267
- [][] 
- []
-
+(pdftex.def)             Requested size: 248.99817pt x 142.26378pt.
 <png/loadBalancerAndVirtualHost/VH-2.png, id=1400, 1066.7353pt x 613.54219pt>
 File: png/loadBalancerAndVirtualHost/VH-2.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/VH-2.png>
@@ -4118,127 +4113,4 @@ File: png/loadBalancerAndVirtualHost/docker.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/docker.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/docker.png  used on inp
 ut line 294.
-(pdftex.def)             Requested size: 2554.7678pt x 142.26378pt.
-
-Overfull \hbox (2101.79991pt too wide) in paragraph at lines 294--295
- [][] 
- []
-
-)
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[65 <./png/loadBalancerAndVirtualHost/LB-1.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[66 <./png/loadBalancerAndVirtualHost/LB-2.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[67 <./png/loadBalancerAndVirtualHost/VH-1.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[68 <./png/loadBalancerAndVirtualHost/VH-2.png> <./png/loadBalancerAndVirtualHo
-st/droplet.png> <./png/loadBalancerAndVirtualHost/droplet-2.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[69 <./png/loadBalancerAndVirtualHost/docker.png>]
-
-Package glossaries Info: Preparing to sort glossary `main' (total number of
-(glossaries)             referenced entries: 1)
-
-
-
-[70
-
-
-
-
-
-] (./output.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 21.
-
-)
-
-[71
-
-
-] (./output.ind
-
-
-
-[72
-
-
-
-]) (./output.aux (./linuxCommands.aux) (./projectProposal.aux) (./awsDeployment
-.aux) (./digitalOceanSetup.aux) (./overleafDeployment.aux) (./overCI.aux) (./pr
-ometheusAndGrafana.aux) (./jenkins_with_pytest.aux) (./loadBalancerAndVirtualHo
-st.aux))
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-04-29>
- ***********
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `output.out' has not changed.
-(rerunfilecheck)             Checksum: 7B4991E7FABE5B2D297B3F01F3F1FFB9;30169.
- ) 
-Here is how much of TeX's memory you used:
- 24340 strings out of 471528
- 510665 string characters out of 5519234
- 1031297 words of memory out of 5000000
- 50193 multiletter control sequences out of 15000+600000
- 634025 words of font info for 66 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 85i,12n,93p,2484b,1246s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </var/lib/overleaf/tmp/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1200.600pk>
- </var/lib/overleaf/tmp/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on output.pdf (82 pages, 1196741 bytes).
-PDF statistics:
- 1621 PDF objects out of 1728 (max. 8388607)
- 1459 compressed objects within 15 object streams
- 422 named destinations out of 1000 (max. 500000)
- 1426 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+(pdftex.def)             Request
