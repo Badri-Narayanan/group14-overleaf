@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  12 NOV 2025 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  12 NOV 2025 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,7 +639,7 @@ Overfull \hbox (17.49368pt too wide) in alignment at lines 16--31
  []
 
 
-Overfull \hbox (17.49368pt too wide) in alignment at lines 31--67
+Overfull \hbox (17.49368pt too wide) in alignment at lines 31--72
  [] [] 
  []
 
@@ -831,7 +831,7 @@ Chapter 3.
 \pydata@fh@0=\write9
 \openout9 = `_78E6221F6393D1356681DB398F14CE6D.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251112201832Z 78E6221F6393D1356681D
+runsystem(latexminted config  --timestamp 20251112202127Z 78E6221F6393D1356681D
 B398F14CE6D)...executed safely (allowed).
 
 
@@ -990,32 +990,32 @@ l.115 \end{minted}
                   
 (That was another \errmessage.)
 
-<png/aws-screenshot-1.jpeg, id=968, 1284.8pt x 337.26pt>
+<png/aws-screenshot-1.jpeg, id=969, 1284.8pt x 337.26pt>
 File: png/aws-screenshot-1.jpeg Graphic file (type jpg)
 <use png/aws-screenshot-1.jpeg>
 Package pdftex.def Info: png/aws-screenshot-1.jpeg  used on input line 124.
 (pdftex.def)             Requested size: 217.42265pt x 57.07098pt.
-<png/aws-screenshot-2.jpeg, id=969, 1284.8pt x 89.33376pt>
+<png/aws-screenshot-2.jpeg, id=970, 1284.8pt x 89.33376pt>
 File: png/aws-screenshot-2.jpeg Graphic file (type jpg)
 <use png/aws-screenshot-2.jpeg>
 Package pdftex.def Info: png/aws-screenshot-2.jpeg  used on input line 131.
 (pdftex.def)             Requested size: 217.42265pt x 15.117pt.
-<png/aws-screenshot-3.jpeg, id=970, 1284.8pt x 508.90125pt>
+<png/aws-screenshot-3.jpeg, id=971, 1284.8pt x 508.90125pt>
 File: png/aws-screenshot-3.jpeg Graphic file (type jpg)
 <use png/aws-screenshot-3.jpeg>
 Package pdftex.def Info: png/aws-screenshot-3.jpeg  used on input line 141.
 (pdftex.def)             Requested size: 217.42265pt x 86.11604pt.
-<png/aws-screenshot-4.jpeg, id=971, 1284.8pt x 468.75125pt>
+<png/aws-screenshot-4.jpeg, id=972, 1284.8pt x 468.75125pt>
 File: png/aws-screenshot-4.jpeg Graphic file (type jpg)
 <use png/aws-screenshot-4.jpeg>
 Package pdftex.def Info: png/aws-screenshot-4.jpeg  used on input line 148.
 (pdftex.def)             Requested size: 217.42265pt x 79.32187pt.
-<png/aws-screenshot-5.jpeg, id=972, 1284.8pt x 501.875pt>
+<png/aws-screenshot-5.jpeg, id=973, 1284.8pt x 501.875pt>
 File: png/aws-screenshot-5.jpeg Graphic file (type jpg)
 <use png/aws-screenshot-5.jpeg>
 Package pdftex.def Info: png/aws-screenshot-5.jpeg  used on input line 158.
 (pdftex.def)             Requested size: 217.42265pt x 84.92706pt.
-<png/aws-screenshot-6.jpeg, id=973, 1284.8pt x 476.78125pt>
+<png/aws-screenshot-6.jpeg, id=974, 1284.8pt x 476.78125pt>
 File: png/aws-screenshot-6.jpeg Graphic file (type jpg)
 <use png/aws-screenshot-6.jpeg>
 Package pdftex.def Info: png/aws-screenshot-6.jpeg  used on input line 165.
@@ -2328,7 +2328,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (./prometheusAndGrafana.tex
 Chapter 7.
-<png/PrometheusAndGrafana/prometheus-dashboard.png, id=1239, 1200.73593pt x 614
+<png/PrometheusAndGrafana/prometheus-dashboard.png, id=1240, 1200.73593pt x 614
 .295pt>
 File: png/PrometheusAndGrafana/prometheus-dashboard.png Graphic file (type png)
 
@@ -2336,7 +2336,7 @@ File: png/PrometheusAndGrafana/prometheus-dashboard.png Graphic file (type png)
 Package pdftex.def Info: png/PrometheusAndGrafana/prometheus-dashboard.png  use
 d on input line 17.
 (pdftex.def)             Requested size: 362.37569pt x 185.3866pt.
-<png/PrometheusAndGrafana/prometheus-dashboard-2.png, id=1241, 1202.99437pt x 6
+<png/PrometheusAndGrafana/prometheus-dashboard-2.png, id=1242, 1202.99437pt x 6
 12.78937pt>
 File: png/PrometheusAndGrafana/prometheus-dashboard-2.png Graphic file (type pn
 g)
@@ -2344,21 +2344,21 @@ g)
 Package pdftex.def Info: png/PrometheusAndGrafana/prometheus-dashboard-2.png  u
 sed on input line 24.
 (pdftex.def)             Requested size: 362.37569pt x 184.58626pt.
-<png/PrometheusAndGrafana/prometheus-status.png, id=1242, 1199.23032pt x 606.76
+<png/PrometheusAndGrafana/prometheus-status.png, id=1243, 1199.23032pt x 606.76
 688pt>
 File: png/PrometheusAndGrafana/prometheus-status.png Graphic file (type png)
 <use png/PrometheusAndGrafana/prometheus-status.png>
 Package pdftex.def Info: png/PrometheusAndGrafana/prometheus-status.png  used o
 n input line 31.
 (pdftex.def)             Requested size: 362.37569pt x 183.34618pt.
-<png/PrometheusAndGrafana/grafana-dashboard.png, id=1243, 1202.99437pt x 612.03
+<png/PrometheusAndGrafana/grafana-dashboard.png, id=1244, 1202.99437pt x 612.03
 656pt>
 File: png/PrometheusAndGrafana/grafana-dashboard.png Graphic file (type png)
 <use png/PrometheusAndGrafana/grafana-dashboard.png>
 Package pdftex.def Info: png/PrometheusAndGrafana/grafana-dashboard.png  used o
 n input line 38.
 (pdftex.def)             Requested size: 362.37569pt x 184.3595pt.
-<png/PrometheusAndGrafana/node-exporter-home.png, id=1244, 1197.72469pt x 612.0
+<png/PrometheusAndGrafana/node-exporter-home.png, id=1245, 1197.72469pt x 612.0
 3656pt>
 File: png/PrometheusAndGrafana/node-exporter-home.png Graphic file (type png)
 <use png/PrometheusAndGrafana/node-exporter-home.png>
@@ -3261,19 +3261,19 @@ l.240 \end{minted}
                   
 (That was another \errmessage.)
 
-<png/loadBalancerAndVirtualHost/LB-1.png, id=1289, 1063.72406pt x 612.03656pt>
+<png/loadBalancerAndVirtualHost/LB-1.png, id=1290, 1063.72406pt x 612.03656pt>
 File: png/loadBalancerAndVirtualHost/LB-1.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/LB-1.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/LB-1.png  used on input
  line 252.
 (pdftex.def)             Requested size: 362.37569pt x 208.50058pt.
-<png/loadBalancerAndVirtualHost/LB-2.png, id=1290, 1062.97125pt x 612.03656pt>
+<png/loadBalancerAndVirtualHost/LB-2.png, id=1291, 1062.97125pt x 612.03656pt>
 File: png/loadBalancerAndVirtualHost/LB-2.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/LB-2.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/LB-2.png  used on input
  line 259.
 (pdftex.def)             Requested size: 339.72592pt x 195.60355pt.
-<png/loadBalancerAndVirtualHost/VH-1.png, id=1291, 1071.25218pt x 612.03656pt>
+<png/loadBalancerAndVirtualHost/VH-1.png, id=1292, 1071.25218pt x 612.03656pt>
 File: png/loadBalancerAndVirtualHost/VH-1.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/VH-1.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/VH-1.png  used on input
@@ -3284,20 +3284,20 @@ Overfull \hbox (511.15018pt too wide) in paragraph at lines 266--267
  [][] 
  []
 
-<png/loadBalancerAndVirtualHost/VH-2.png, id=1292, 1066.7353pt x 613.54219pt>
+<png/loadBalancerAndVirtualHost/VH-2.png, id=1293, 1066.7353pt x 613.54219pt>
 File: png/loadBalancerAndVirtualHost/VH-2.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/VH-2.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/VH-2.png  used on input
  line 273.
 (pdftex.def)             Requested size: 247.34604pt x 142.26378pt.
-<png/loadBalancerAndVirtualHost/droplet.png, id=1293, 1190.94937pt x 596.2275pt
+<png/loadBalancerAndVirtualHost/droplet.png, id=1294, 1190.94937pt x 596.2275pt
 >
 File: png/loadBalancerAndVirtualHost/droplet.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/droplet.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/droplet.png  used on in
 put line 280.
 (pdftex.def)             Requested size: 284.16182pt x 142.26378pt.
-<png/loadBalancerAndVirtualHost/droplet-2.png, id=1294, 1190.94937pt x 368.1253
+<png/loadBalancerAndVirtualHost/droplet-2.png, id=1295, 1190.94937pt x 368.1253
 pt>
 File: png/loadBalancerAndVirtualHost/droplet-2.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/droplet-2.png>
@@ -3309,7 +3309,7 @@ Overfull \hbox (7.2845pt too wide) in paragraph at lines 287--288
  [][] 
  []
 
-<png/loadBalancerAndVirtualHost/docker.png, id=1295, 1189.44376pt x 66.2475pt>
+<png/loadBalancerAndVirtualHost/docker.png, id=1296, 1189.44376pt x 66.2475pt>
 File: png/loadBalancerAndVirtualHost/docker.png Graphic file (type png)
 <use png/loadBalancerAndVirtualHost/docker.png>
 Package pdftex.def Info: png/loadBalancerAndVirtualHost/docker.png  used on inp
@@ -4279,10 +4279,10 @@ live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on output.pdf (83 pages, 907932 bytes).
+Output written on output.pdf (83 pages, 908125 bytes).
 PDF statistics:
- 1570 PDF objects out of 1728 (max. 8388607)
- 1413 compressed objects within 15 object streams
+ 1571 PDF objects out of 1728 (max. 8388607)
+ 1414 compressed objects within 15 object streams
  423 named destinations out of 1000 (max. 500000)
  1315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
