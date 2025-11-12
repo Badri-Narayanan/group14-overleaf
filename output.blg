@@ -8,8 +8,8 @@ A level-1 auxiliary file: digitalOceanSetup.aux
 A level-1 auxiliary file: overleafDeployment.aux
 A level-1 auxiliary file: overCI.aux
 A level-1 auxiliary file: prometheusAndGrafana.aux
-A level-1 auxiliary file: loadBalancerAndVirtualHost.aux
 A level-1 auxiliary file: jenkins_with_pytest.aux
+A level-1 auxiliary file: loadBalancerAndVirtualHost.aux
 The style file: IEEEtran.bst
 I found no \citation commands---while reading file output.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
