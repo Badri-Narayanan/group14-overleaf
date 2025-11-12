@@ -24,7 +24,6 @@ Latexmk: Examining 'output.log'
 Latexmk: Index file 'output.idx' was written
 Latexmk: Found input bbl file 'output.bbl'
 Latexmk: References changed.
-Latexmk: References changed.
 Latexmk: Log file says output to 'output.pdf'
 Have index file 'output.idx', output.ind output
 Latexmk: Found bibliography file(s):
@@ -34,6 +33,7 @@ Rule 'bibtex output':  Reasons for rerun
 Changed files or newly in use/created:
   awsDeployment.aux
   digitalOceanSetup.aux
+  jenkins_with_pytest.aux
   linuxCommands.aux
   loadBalancerAndVirtualHost.aux
   output.aux
@@ -68,10 +68,7 @@ Changed files or newly in use/created:
   linuxCommands.aux
   loadBalancerAndVirtualHost.aux
   output.aux
-  output.lof
   output.lot
-  output.out
-  output.toc
   overCI.aux
   overleafDeployment.aux
   projectProposal.aux
@@ -95,71 +92,7 @@ Latexmk: Log file says output to 'output.pdf'
 Have index file 'output.idx', output.ind output
 Latexmk: Found bibliography file(s):
   ./bibfile.bib
-Latexmk: applying rule 'bibtex output'...
-Rule 'bibtex output':  Reasons for rerun
-Changed files or newly in use/created:
-  awsDeployment.aux
-  digitalOceanSetup.aux
-  jenkins_with_pytest.aux
-  linuxCommands.aux
-  loadBalancerAndVirtualHost.aux
-  output.aux
-  overCI.aux
-  overleafDeployment.aux
-  projectProposal.aux
-  prometheusAndGrafana.aux
-
-------------
-Run number 2 of rule 'bibtex output'
-------------
-------------
-Running 'bibtex  "output.aux"'
-------------
-This is BibTeX, Version 0.99d (TeX Live 2025)
-The top-level auxiliary file: output.aux
-The style file: IEEEtran.bst
-I found no \citation commands---while reading file output.aux
-Database file #1: bibfile.bib
--- IEEEtran.bst version 1.10 (2002/09/27) by Michael Shell.
--- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
--- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-
-Done.
-(There was 1 error message)
-Latexmk: applying rule 'pdflatex'...
-Rule 'pdflatex':  Reasons for rerun
-Changed files or newly in use/created:
-  awsDeployment.aux
-  digitalOceanSetup.aux
-  jenkins_with_pytest.aux
-  linuxCommands.aux
-  loadBalancerAndVirtualHost.aux
-  output.aux
-  overCI.aux
-  overleafDeployment.aux
-  projectProposal.aux
-  prometheusAndGrafana.aux
-
-------------
-Run number 3 of rule 'pdflatex'
-------------
-------------
-Running 'pdflatex  -synctex=1 -interaction=batchmode -recorder --jobname="output"  "groupAssignments.tex"'
-------------
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
- restricted \write18 enabled.
-entering extended mode
-Latexmk: Getting log file 'output.log'
-Latexmk: Examining 'output.fls'
-Latexmk: Examining 'output.log'
-Latexmk: Index file 'output.idx' was written
-Latexmk: Found input bbl file 'output.bbl'
-Latexmk: Log file says output to 'output.pdf'
-Have index file 'output.idx', output.ind output
-Latexmk: Found bibliography file(s):
-  ./bibfile.bib
 Latexmk: Summary of warnings from last run of *latex:
-  Latex failed to resolve 1 reference(s)
   =====Latex reported missing or unavailable character(s).
 =====See log file for details.
 Latexmk: Errors, in force_mode: so I tried finishing targets
