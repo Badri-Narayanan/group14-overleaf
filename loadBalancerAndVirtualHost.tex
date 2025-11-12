@@ -2,9 +2,9 @@
 \label{chap:lbAndVH}
 
 % =========================================================
-\section*{A — Project: Load Balancer}
+\section{A — Project: Load Balancer}
 
-\subsection*{File Structure}
+\subsection{File Structure}
 \begin{minted}[fontsize=\small]{text}
 load-balanced-app/
 ├── docker-compose.yml
@@ -16,7 +16,7 @@ load-balanced-app/
     └── index.html
 \end{minted}
 
-\subsection*{File Contents}
+\subsection{File Contents}
 
 \noindent\textbf{web1/index.html}
 \begin{minted}[fontsize=\small]{html}
@@ -79,7 +79,7 @@ services:
       - web2
 \end{minted}
 
-\subsection*{Steps Executed}
+\subsection{Steps Executed}
 \begin{minted}[fontsize=\small]{bash}
 cd /path/to/load-balanced-app
 docker-compose up -d --build
@@ -93,9 +93,9 @@ docker-compose down
 \end{minted}
 
 % =========================================================
-\section*{B — Project: Virtual Host (Name-Based)}
+\section{B — Project: Virtual Host (Name-Based)}
 
-\subsection*{File Structure}
+\subsection{File Structure}
 \begin{minted}[fontsize=\small]{text}
 virtual-hosts/
 ├── docker-compose.yml
@@ -107,7 +107,7 @@ virtual-hosts/
     └── index.html
 \end{minted}
 
-\subsection*{File Contents}
+\subsection{File Contents}
 
 \noindent\textbf{web1/index.html}
 \begin{minted}[fontsize=\small]{html}
@@ -177,7 +177,7 @@ services:
       - web2
 \end{minted}
 
-\subsection*{Steps Executed}
+\subsection{Steps Executed}
 \begin{minted}[fontsize=\small]{bash}
 cd /path/to/virtual-hosts
 docker-compose up -d --build
@@ -191,9 +191,9 @@ docker-compose down
 \end{minted}
 
 % =========================================================
-\section*{C — Local DNS (Simulated Domains)}
+\section{C — Local DNS (Simulated Domains)}
 
-\subsection*{Windows Hosts File Configuration}
+\subsection{Windows Hosts File Configuration}
 \begin{minted}[fontsize=\small]{text}
 C:\Windows\System32\drivers\etc\hosts
 \end{minted}
@@ -214,7 +214,7 @@ Open in browser:
     \item http://web2.domain.com
 \end{itemize}
 
-\subsection*{Linux / Unix Hosts File Configuration}
+\subsection{Linux / Unix Hosts File Configuration}
 \begin{minted}[fontsize=\small]{bash}
 sudo nano /etc/hosts
 \end{minted}
@@ -245,7 +245,7 @@ Open in browser:
     \item http://web2.domain.com
 \end{itemize}
 
-\section*{Executed Outputs}
+\section{Executed Outputs}
 
 \begin{figure}[h]
     \centering

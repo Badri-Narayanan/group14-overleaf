@@ -31,7 +31,6 @@ Latexmk: Found bibliography file(s):
 Latexmk: applying rule 'bibtex output'...
 Rule 'bibtex output':  Reasons for rerun
 Changed files or newly in use/created:
-  jenkins_with_pytest.aux
   loadBalancerAndVirtualHost.aux
   output.aux
 
@@ -55,10 +54,9 @@ Done.
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
 Changed files or newly in use/created:
-  jenkins_with_pytest.aux
   loadBalancerAndVirtualHost.aux
   output.aux
-  output.lof
+  output.out
   output.toc
 
 ------------
