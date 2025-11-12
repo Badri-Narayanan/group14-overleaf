@@ -23,6 +23,7 @@ projectProposal.tex
 prologue.tex
 prometheusAndGrafana.tex
 loadBalancerAndVirtualHost.tex
+jenkins_with_pytest.tex
 eps/UseCases/MyUseCaseDiagram.eps
 eps/UseCases/dsnHelloWorld.eps
 eps/UseCases/dsnMyDiagram.eps
@@ -49,4 +50,4 @@ png/loadBalancerAndVirtualHost/VH-2.png
 png/loadBalancerAndVirtualHost/docker.png
 png/loadBalancerAndVirtualHost/droplet-2.png
 visio/UseCases/dsnSampleUseCase.vsd
-stateHash:10b35aa39096459d9b0c7886e491af9cc8949b2a
+stateHash:0cd77a978f4e0419aa790d6624e1b68877ccbcfd

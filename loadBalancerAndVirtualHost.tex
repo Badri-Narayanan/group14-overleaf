@@ -1,4 +1,5 @@
 \chapter{Load Balancer and Virtual Host Setup}
+\label{chap:lbAndVH}
 
 % =========================================================
 \section*{A — Project: Load Balancer}
@@ -198,9 +199,10 @@ C:\Windows\System32\drivers\etc\hosts
 \end{minted}
 
 \begin{minted}[fontsize=\small]{text}
-203.0.113.42 web1.domain.com
-203.0.113.42 web2.domain.com
+142.93.249.208 web1.domain.com
+142.93.249.208 web2.domain.com
 \end{minted}
+Here the IP Address before the domain is the <digital-ocean-droplet-ipv4-addr>
 
 \begin{minted}[fontsize=\small]{bash}
 ipconfig /flushdns
@@ -219,9 +221,10 @@ sudo nano /etc/hosts
 
 Add:
 \begin{minted}[fontsize=\small]{text}
-203.0.113.42 web1.domain.com
-203.0.113.42 web2.domain.com
+142.93.249.208 web1.domain.com
+142.93.249.208 web2.domain.com
 \end{minted}
+Here the IP Address before the domain is the <digital-ocean-droplet-ipv4-addr>
 
 Save and apply:
 \begin{minted}[fontsize=\small]{bash}
@@ -241,3 +244,54 @@ Open in browser:
     \item http://web1.domain.com
     \item http://web2.domain.com
 \end{itemize}
+
+\section*{Executed Outputs}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{png/loadBalancerAndVirtualHost/LB-1.png}
+    \caption{Load Balancer Response 1}
+    \label{fig:lbr1}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{png/loadBalancerAndVirtualHost/LB-2.png}
+    \caption{Load Balancer Response 2}
+    \label{fig:lbr2}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[scale=0.9]{png/loadBalancerAndVirtualHost/VH-1.png}
+    \caption{Virtual Host Response 1}
+    \label{fig:vhr1}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{png/loadBalancerAndVirtualHost/VH-2.png}
+    \caption{Virtual Host Response 2}
+    \label{fig:vhr2}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{png/loadBalancerAndVirtualHost/droplet.png}
+    \caption{Inside Droplet 1}
+    \label{fig:drop-1}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{png/loadBalancerAndVirtualHost/droplet-2.png}
+    \caption{Inside Droplet 2}
+    \label{fig:drop-2}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{png/loadBalancerAndVirtualHost/docker.png}
+    \caption{Docker Processes running}
+    \label{fig:docker-ps}
+\end{figure}

@@ -1,0 +1,349 @@
+\chapter{Jenkins with Pytest}
+\label{chap:jenkinswithpytest}
+
+\section{Introduction}
+This chapter walks through setting up a CI/CD pipeline with Jenkins, Docker, Python, and Pytest. The goal was to create an automated testing system that works with Git and generates test reports automatically.
+
+\section{Environment Setup}
+
+\subsection{Project Directory Structure}
+First, I created the project directory and organized the files like this:
+
+\begin{verbatim}
+jenkins-python-pytest-demo/
+├── docker-compose.yml
+├── Jenkinsfile
+├── requirements.txt
+├── .gitignore
+└── tests/
+    └── test_sample.py
+\end{verbatim}
+
+\subsection{Docker Compose Configuration}
+I set up a Docker Compose file to run Jenkins in a container. The configuration includes volume mounts so Jenkins data persists between restarts, and also mounts the Docker socket so Jenkins can run Docker commands if needed.
+
+\begin{lstlisting}[language=yaml, caption={docker-compose.yml}]
+version: '3.8'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    user: root
+
+volumes:
+  jenkins_home:
+\end{lstlisting}
+
+\textbf{Configuration Note:} I added \texttt{user: root} to fix permission issues when accessing the Docker socket. Without this, Jenkins couldn't access Docker properly.
+
+\subsection{Starting Jenkins}
+Starting Jenkins was straightforward with Docker Compose:
+
+\begin{verbatim}
+docker compose up -d
+\end{verbatim}
+
+I waited about 1-2 minutes for the container to fully start up before accessing it.
+
+\section{Jenkins Initial Configuration}
+
+\subsection{Accessing Jenkins Web Interface}
+Once the container was running, I opened a browser and went to \texttt{http://localhost:8080}. To unlock Jenkins, I needed the initial admin password which I got by running:
+
+\begin{verbatim}
+docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+\end{verbatim}
+
+\subsection{Plugin Installation}
+During the setup wizard, I just clicked "Install suggested plugins" which gave me all the basic plugins I needed for Git integration, pipelines, and JUnit test reporting.
+
+\subsection{Admin User Creation}
+I created an admin account with my credentials so I wouldn't have to use that long generated password every time. View password hints for details.
+
+\subsection{Python Installation in Jenkins Container}
+Here's where I ran into my first issue - the Jenkins Docker image doesn't come with Python installed by default. So I had to install it manually inside the container:
+
+\begin{verbatim}
+docker exec -it jenkins bash
+apt-get update
+apt-get install -y python3 python3-venv python3-pip
+exit
+\end{verbatim}
+
+This was a critical step - without Python installed, the pipeline wouldn't be able to run any tests.
+
+\section{Python Project Implementation}
+
+\subsection{Dependencies Configuration}
+I created a simple \texttt{requirements.txt} file with just pytest:
+
+\begin{lstlisting}[caption={requirements.txt}]
+pytest
+\end{lstlisting}
+
+\subsection{Test Suite Implementation}
+For the tests, I wrote three simple test functions in \texttt{tests/test\_sample.py}:
+
+\begin{lstlisting}[language=Python, caption={tests/test\_sample.py}]
+def test_addition():
+    assert 1 + 1 == 2
+
+def test_subtraction():
+    assert 5 - 2 == 3
+
+def test_failure_example():
+    assert 2 * 2 == 5  # This will fail
+\end{lstlisting}
+
+The third test was intentionally made to fail (2 * 2 doesn't equal 5!) so I could show test failure reporting in Jenkins.
+
+\section{CI/CD Pipeline Configuration}
+
+\subsection{Jenkinsfile Implementation}
+The Jenkinsfile is where the magic happens - it tells Jenkins what to do automatically:
+
+\begin{lstlisting}[language=Java, caption={Jenkinsfile}]
+pipeline {
+    agent any
+    
+    stages {
+        stage('Install dependencies') {
+            steps {
+                sh 'python3 -m venv venv'
+                sh './venv/bin/pip install -r requirements.txt'
+            }
+        }
+        
+        stage('Run tests') {
+            steps {
+                sh './venv/bin/pytest --junitxml=report.xml'
+            }
+        }
+        
+        stage('Publish Report') {
+            steps {
+                junit 'report.xml'
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+The pipeline has three main stages:
+\begin{enumerate}
+    \item \textbf{Install dependencies:} Creates a Python virtual environment and installs pytest
+    \item \textbf{Run tests:} Runs pytest and generates a JUnit XML report
+    \item \textbf{Publish Report:} Makes the test results visible in Jenkins UI
+\end{enumerate}
+
+\section{Git Integration}
+
+\subsection{Local Repository Initialization}
+I initialized a Git repo to track my code:
+
+\begin{verbatim}
+git init
+git add .
+git commit -m "Initial commit"
+\end{verbatim}
+
+\subsection{Git Ignore Configuration}
+Created a \texttt{.gitignore} file to keep generated files out of version control:
+
+\begin{lstlisting}[caption={.gitignore}]
+venv/
+*.pyc
+__pycache__/
+report.xml
+.pytest_cache/
+\end{lstlisting}
+
+\subsection{GitHub Repository Setup}
+I pushed everything to GitHub so Jenkins could pull the code from there:
+
+\begin{verbatim}
+git remote add origin https://github.com/[username]/jenkins-python-pytest-demo.git
+git branch -M main
+git push -u origin main
+\end{verbatim}
+
+\section{Jenkins Pipeline Job Configuration}
+
+\subsection{Job Creation}
+Creating the pipeline job in Jenkins was pretty straightforward:
+\begin{enumerate}
+    \item Went to Jenkins Dashboard
+    \item Clicked "New Item"
+    \item Named it: \texttt{Python-Pytest-Pipeline}
+    \item Selected "Pipeline" as the project type
+    \item Clicked "OK"
+\end{enumerate}
+
+\subsection{SCM Configuration}
+I configured Jenkins to pull the Jenkinsfile from my GitHub repo:
+\begin{itemize}
+    \item Definition: Pipeline script from SCM
+    \item SCM: Git
+    \item Repository URL: My GitHub repository URL
+    \item Branch Specifier: \texttt{*/main}
+    \item Script Path: \texttt{Jenkinsfile}
+\end{itemize}
+
+\section{Pipeline Execution and Results}
+
+\subsection{Build Execution}
+I clicked "Build Now" and watched Jenkins do its thing. The pipeline ran through all three stages automatically.
+
+\subsection{Console Output Analysis}
+Looking at the console output, I could see each step happening:
+\begin{itemize}
+    \item Creating the virtual environment
+    \item Installing pytest
+    \item Running the tests
+    \item Generating the JUnit report
+\end{itemize}
+
+\subsection{Test Results}
+As expected, the tests ran with these results:
+\begin{itemize}
+    \item Total tests: 3
+    \item Passed: 2 (test\_addition, test\_subtraction)
+    \item Failed: 1 (test\_failure\_example)
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{png/jenkins_pipeline_success.png}
+    \caption{Jenkins Pipeline Successful Execution showing all stages completed}
+    \label{fig:pipeline_success}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{png/jenkins_test_results.png}
+    \caption{Jenkins Test Results showing 2 passed and 1 failed test}
+    \label{fig:test_results}
+\end{figure}
+
+\section{Additional Configuration Changes}
+
+\subsection{Docker Socket Permissions}
+Early on, I hit a permission error with \texttt{/var/run/docker.sock}. Fixed it by adding \texttt{user: root} to the Docker Compose file.
+
+\subsection{Workspace Cleanup}
+I also made sure the workspace directory had the right permissions:
+
+\begin{verbatim}
+docker exec -it jenkins chmod -R 755 /var/jenkins_home/workspace
+\end{verbatim}
+
+\section{Bonus Features Implementation}
+
+\subsection{Code Coverage Tracking}
+I added code coverage to get more detailed metrics about the tests. First, updated \texttt{requirements.txt}:
+
+\begin{lstlisting}[caption={Updated requirements.txt}]
+pytest
+pytest-cov
+\end{lstlisting}
+
+Then modified the Jenkinsfile to generate coverage reports:
+
+\begin{lstlisting}[language=Java, caption={Updated Run tests stage}]
+stage('Run tests') {
+    steps {
+        sh './venv/bin/pytest --junitxml=report.xml --cov=. --cov-report=html'
+    }
+}
+\end{lstlisting}
+
+\subsection{Email Notifications on Failure}
+I set up email notifications so I'd know when builds fail. Added this to the Jenkinsfile:
+
+\begin{lstlisting}[language=Java, caption={Post-build actions in Jenkinsfile}]
+post {
+    failure {
+        mail to: 'admin@example.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Build failed. Check ${env.BUILD_URL}"
+    }
+}
+\end{lstlisting}
+
+\textbf{Email Server Configuration:}
+To make the emails actually work, I had to configure SMTP settings in Jenkins (Manage Jenkins → Configure System → E-mail Notification):
+\begin{itemize}
+    \item SMTP Server: smtp.gmail.com
+    \item SMTP Port: 465
+    \item Use SSL: Enabled
+    \item SMTP Authentication: Added my Gmail app password
+\end{itemize}
+
+\textbf{Note:} Regular Gmail passwords don't work - you need to generate an "App Password" from your Google account settings.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{png/jenkins_email_notification.png}
+    \caption{Email notification received after test failure}
+    \label{fig:email_notification}
+\end{figure}
+
+\section{Deliverables}
+
+\subsection{GitHub Repository}
+All the project code is available on GitHub at:
+\begin{verbatim}
+https://github.com/[username]/jenkins-python-pytest-demo
+\end{verbatim}
+
+\subsection{Screenshots Provided}
+Here are the screenshots showing everything working:
+\begin{enumerate}
+    \item Jenkins pipeline execution with all stages completed (Figure \ref{fig:pipeline_success})
+    \item Test results showing 2 passed and 1 failed test (Figure \ref{fig:test_results})
+    \item Email notification when a test fails (Figure \ref{fig:email_notification})
+\end{enumerate}
+
+\section{Challenges and Solutions}
+
+\subsection{Challenge: Python Not Available}
+\textbf{Problem:} Jenkins Docker image doesn't come with Python installed.
+
+\textbf{Solution:} Had to manually install Python 3, pip, and venv inside the container using apt-get.
+
+\subsection{Challenge: Docker Socket Permissions}
+\textbf{Problem:} Got permission denied errors when Jenkins tried to access Docker.
+
+\textbf{Solution:} Added \texttt{user: root} to the docker-compose.yml file.
+
+\subsection{Challenge: Virtual Environment Path Issues}
+\textbf{Problem:} Jenkins couldn't find the pytest executable because the venv wasn't in PATH.
+
+\textbf{Solution:} Used full paths like \texttt{./venv/bin/pytest} instead of just \texttt{pytest}.
+
+\subsection{Challenge: Email SMTP Configuration}
+\textbf{Problem:} Initial email notifications failed with "Connection refused" errors.
+
+\textbf{Solution:} Had to properly configure SMTP settings in Jenkins with Gmail's SMTP server and generate an App Password instead of using my regular password.
+
+\section{Conclusion}
+This project was a great hands-on experience setting up a complete CI/CD pipeline. I got Jenkins running in Docker, created a Python testing environment, and made it all work together with Git integration. The pipeline automatically installs dependencies, runs tests, and generates reports - exactly what you'd want in a real development workflow.
+
+The bonus features (email notifications and code coverage) added even more value and made the pipeline feel more production-ready. While I ran into some issues along the way (Python installation, permissions, SMTP config), working through them helped me understand how all these pieces fit together.
+
+Key things I learned:
+\begin{itemize}
+    \item How to containerize Jenkins for consistent environments
+    \item Writing declarative Jenkins pipelines
+    \item Integrating automated testing with Python and Pytest
+    \item Setting up Git/GitHub integration
+    \item Configuring notifications and monitoring
+\end{itemize}
+
+This setup could easily be expanded with deployment stages, multiple environments, or integration with cloud services. It's a solid foundation for any CI/CD workflow.
