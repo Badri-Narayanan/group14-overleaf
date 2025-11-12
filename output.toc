@@ -190,17 +190,17 @@
 \contentsline {section}{\numberline {8.9}Additional Configuration Changes}{58}{section.8.9}%
 \contentsline {subsection}{\numberline {8.9.1}Docker Socket Permissions}{58}{subsection.8.9.1}%
 \contentsline {subsection}{\numberline {8.9.2}Workspace Cleanup}{58}{subsection.8.9.2}%
-\contentsline {section}{\numberline {8.10}Bonus Features Implementation}{59}{section.8.10}%
-\contentsline {subsection}{\numberline {8.10.1}Code Coverage Tracking}{59}{subsection.8.10.1}%
-\contentsline {subsection}{\numberline {8.10.2}Email Notifications on Failure}{59}{subsection.8.10.2}%
-\contentsline {section}{\numberline {8.11}Deliverables}{60}{section.8.11}%
-\contentsline {subsection}{\numberline {8.11.1}GitHub Repository}{60}{subsection.8.11.1}%
-\contentsline {subsection}{\numberline {8.11.2}Screenshots Provided}{60}{subsection.8.11.2}%
-\contentsline {section}{\numberline {8.12}Challenges and Solutions}{61}{section.8.12}%
-\contentsline {subsection}{\numberline {8.12.1}Challenge: Python Not Available}{61}{subsection.8.12.1}%
-\contentsline {subsection}{\numberline {8.12.2}Challenge: Docker Socket Permissions}{61}{subsection.8.12.2}%
-\contentsline {subsection}{\numberline {8.12.3}Challenge: Virtual Environment Path Issues}{61}{subsection.8.12.3}%
-\contentsline {subsection}{\numberline {8.12.4}Challenge: Email SMTP Configuration}{61}{subsection.8.12.4}%
-\contentsline {section}{\numberline {8.13}Conclusion}{61}{section.8.13}%
-\contentsline {chapter}{\numberline {9}Load Balancer and Virtual Host Setup}{62}{chapter.9}%
-\contentsline {chapter}{Glossary}{71}{section*.70}%
+\contentsline {section}{\numberline {8.10}Bonus Features Implementation}{58}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Code Coverage Tracking}{58}{subsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.10.2}Email Notifications on Failure}{58}{subsection.8.10.2}%
+\contentsline {section}{\numberline {8.11}Deliverables}{59}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}GitHub Repository}{59}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Screenshots Provided}{59}{subsection.8.11.2}%
+\contentsline {section}{\numberline {8.12}Challenges and Solutions}{59}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Challenge: Python Not Available}{59}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Challenge: Docker Socket Permissions}{59}{subsection.8.12.2}%
+\contentsline {subsection}{\numberline {8.12.3}Challenge: Virtual Environment Path Issues}{60}{subsection.8.12.3}%
+\contentsline {subsection}{\numberline {8.12.4}Challenge: Email SMTP Configuration}{60}{subsection.8.12.4}%
+\contentsline {section}{\numberline {8.13}Conclusion}{60}{section.8.13}%
+\contentsline {chapter}{\numberline {9}Load Balancer and Virtual Host Setup}{61}{chapter.9}%
+\contentsline {chapter}{Glossary}{70}{section*.70}%

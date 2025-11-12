@@ -18,13 +18,13 @@
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Node Exporter Home}}{52}{figure.7.5}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Jenkins Pipeline Successful Execution showing all stages completed}}{57}{figure.8.1}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Jenkins Test Results showing 2 passed and 1 failed test}}{58}{figure.8.2}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Email notification received after test failure}}{60}{figure.8.3}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Jenkins Test Results showing 2 passed and 1 failed test}}{57}{figure.8.2}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Email notification received after test failure}}{59}{figure.8.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Load Balancer Response 1}}{66}{figure.9.1}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Load Balancer Response 2}}{67}{figure.9.2}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Virtual Host Response 1}}{68}{figure.9.3}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Virtual Host Response 2}}{69}{figure.9.4}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Inside Droplet 1}}{69}{figure.9.5}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Inside Droplet 2}}{69}{figure.9.6}%
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Docker Processes running}}{70}{figure.9.7}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Load Balancer Response 1}}{65}{figure.9.1}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Load Balancer Response 2}}{66}{figure.9.2}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Virtual Host Response 1}}{67}{figure.9.3}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Virtual Host Response 2}}{68}{figure.9.4}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Inside Droplet 1}}{68}{figure.9.5}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Inside Droplet 2}}{68}{figure.9.6}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Docker Processes running}}{69}{figure.9.7}%

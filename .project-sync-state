@@ -37,6 +37,9 @@ png/aws-screenshot-4.jpeg
 png/aws-screenshot-5.jpeg
 png/aws-screenshot-6.jpeg
 png/stvAgileProcess.png
+png/jenkins_test_results.png
+png/jenkins_pipeline_success.png
+png/jenkins_email_notification.png
 png/PrometheusAndGrafana/grafana-dashboard.png
 png/PrometheusAndGrafana/node-exporter-home.png
 png/PrometheusAndGrafana/prometheus-dashboard-2.png
@@ -50,4 +53,4 @@ png/loadBalancerAndVirtualHost/VH-2.png
 png/loadBalancerAndVirtualHost/docker.png
 png/loadBalancerAndVirtualHost/droplet-2.png
 visio/UseCases/dsnSampleUseCase.vsd
-stateHash:ca19af88e64c2264d2755035791df804bfadd38a
+stateHash:70238b9b77969b73ab7e68cdd057c2c310eb7ab7
