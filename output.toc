@@ -1,0 +1,218 @@
+\contentsline {chapter}{Revision History}{ii}{table.0.1}%
+\contentsline {chapter}{Passwords and Service Hints}{iii}{section*.1}%
+\contentsline {chapter}{\numberline {1}Linux Commands}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Navigation \& File Ops}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Viewing \& Searching}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Text Processing}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Permissions \& Ownership}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Links \& Find}{4}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Processes \& Job Control}{4}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Archiving \& Compression}{5}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Networking \& System Info}{5}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Package \& Services (Debian/Ubuntu)}{6}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Bash \& Scripting}{6}{section.1.10}%
+\contentsline {chapter}{\numberline {2}Project Proposal -- Group 14}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Project Title}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Project Description}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Simple Tasks}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}DevSecOps Tools}{8}{section.2.4}%
+\contentsline {chapter}{\numberline {3}AWS Deployment}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overview}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Set Environment Variables}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Create (or Reuse) an ECR Repository}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Authenticate Docker to ECR}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Build, Tag, and Push Your Local Image}{11}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Verify the Image in ECR}{11}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Quick Deploy with App Runner}{11}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Deployment Results}{12}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Class-Based JavaScript Implementation}{13}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Updated HTML}{13}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}ColorChanger Class}{13}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}UML Class Diagram}{14}{subsection.3.9.3}%
+\contentsline {section}{\numberline {3.10}Latex Docker}{14}{section.3.10}%
+\contentsline {section}{\numberline {3.11}Project Structure}{14}{section.3.11}%
+\contentsline {section}{\numberline {3.12}Sample LaTeX Document}{14}{section.3.12}%
+\contentsline {section}{\numberline {3.13}Dockerfile}{15}{section.3.13}%
+\contentsline {section}{\numberline {3.14}Compilation Script}{15}{section.3.14}%
+\contentsline {section}{\numberline {3.15}Build the Docker Image}{16}{section.3.15}%
+\contentsline {section}{\numberline {3.16}Compile a LaTeX Document}{16}{section.3.16}%
+\contentsline {section}{\numberline {3.17}Alternative: Interactive Mode}{16}{section.3.17}%
+\contentsline {section}{\numberline {3.18}Results}{16}{section.3.18}%
+\contentsline {chapter}{\numberline {4}DigitalOcean Setup}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bugzilla Details}{17}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Docker Images Used}{17}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Setup Process}{17}{subsection.4.1.2}%
+\contentsline {subsubsection}{Step 1: Create DigitalOcean Droplet}{17}{section*.5}%
+\contentsline {subsubsection}{Step 2: Install Docker}{17}{section*.6}%
+\contentsline {subsubsection}{Step 3: Create Docker Network}{17}{section*.7}%
+\contentsline {subsubsection}{Step 4: Deploy MariaDB Container}{18}{section*.8}%
+\contentsline {subsubsection}{Step 5: Deploy Bugzilla Container}{18}{section*.9}%
+\contentsline {subsection}{\numberline {4.1.3}Configuration Parameters}{18}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Troubleshooting}{18}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Access URL}{18}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Verification}{19}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}Overleaf Details}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Docker Images Used}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Setup Process}{19}{subsection.4.2.2}%
+\contentsline {subsubsection}{Step 1: Create Dedicated DigitalOcean Droplet}{19}{section*.10}%
+\contentsline {subsubsection}{Step 2: Install Docker and Docker Compose}{19}{section*.11}%
+\contentsline {subsubsection}{Step 3: Create Docker Compose Configuration}{19}{section*.12}%
+\contentsline {subsubsection}{Step 4: Docker Compose Configuration}{20}{section*.13}%
+\contentsline {subsubsection}{Step 5: Initialize MongoDB Replica Set}{21}{section*.14}%
+\contentsline {subsubsection}{Step 6: Deploy Overleaf}{21}{section*.15}%
+\contentsline {subsubsection}{Step 7: Configure Firewall}{21}{section*.16}%
+\contentsline {subsection}{\numberline {4.2.3}Configuration Parameters}{21}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Troubleshooting}{22}{subsection.4.2.4}%
+\contentsline {subsubsection}{MongoDB Version Requirement}{22}{section*.17}%
+\contentsline {subsubsection}{MongoDB Replica Set Requirement}{22}{section*.18}%
+\contentsline {subsubsection}{Environment Variable Rebranding}{22}{section*.19}%
+\contentsline {subsubsection}{Volume Path Updates}{22}{section*.20}%
+\contentsline {subsection}{\numberline {4.2.5}Initialization}{22}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Verification}{22}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Access URL}{23}{subsection.4.2.7}%
+\contentsline {chapter}{\numberline {5}Overleaf Deployment}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Domain Registration and DNS Configuration}{24}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Domain Acquisition}{24}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}DigitalOcean Droplet Creation}{24}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}DNS Configuration in DigitalOcean}{24}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}DNS Propagation Verification}{25}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}SSL Certificate Configuration with Let's Encrypt}{25}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}SSL Certificate Overview}{25}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Prerequisites for SSL Setup}{25}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}SSL Certificate Installation Process}{26}{subsection.5.3.3}%
+\contentsline {subsubsection}{Install Certbot and Nginx}{26}{section*.21}%
+\contentsline {subsubsection}{Configure Nginx as Reverse Proxy}{26}{section*.22}%
+\contentsline {subsubsection}{Obtain SSL Certificate}{27}{section*.23}%
+\contentsline {subsubsection}{Verify SSL Configuration}{27}{section*.24}%
+\contentsline {subsection}{\numberline {5.3.4}SSL Certificate Automatic Renewal}{28}{subsection.5.3.4}%
+\contentsline {subsubsection}{Test Renewal Process}{28}{section*.25}%
+\contentsline {subsection}{\numberline {5.3.5}Update Docker Compose for SSL}{28}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Overleaf Instance Deployment}{28}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Repository Setup}{28}{subsection.5.4.1}%
+\contentsline {subsubsection}{Fork and Clone Repository}{28}{section*.26}%
+\contentsline {subsubsection}{Navigate to Configuration Directory}{28}{section*.27}%
+\contentsline {subsection}{\numberline {5.4.2}Docker Compose Configuration}{28}{subsection.5.4.2}%
+\contentsline {subsubsection}{Create docker-compose.yml}{28}{section*.28}%
+\contentsline {subsection}{\numberline {5.4.3}Build and Deploy Containers}{30}{subsection.5.4.3}%
+\contentsline {subsubsection}{Initialize MongoDB Replica Set}{30}{section*.29}%
+\contentsline {subsubsection}{Build Docker Images}{30}{section*.30}%
+\contentsline {subsubsection}{Verify Container Status}{30}{section*.31}%
+\contentsline {subsection}{\numberline {5.4.4}LaTeX Package Installation}{31}{subsection.5.4.4}%
+\contentsline {subsubsection}{Install Essential LaTeX Packages}{31}{section*.32}%
+\contentsline {subsection}{\numberline {5.4.5}Administrator Account Creation}{31}{subsection.5.4.5}%
+\contentsline {subsubsection}{Create Admin Account}{31}{section*.33}%
+\contentsline {subsubsection}{Set Administrator Password}{31}{section*.34}%
+\contentsline {subsection}{\numberline {5.4.6}Access Overleaf Instance}{32}{subsection.5.4.6}%
+\contentsline {section}{\numberline {5.5}GitHub Repository Integration with DigitalOcean App Platform}{32}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}DigitalOcean App Platform Overview}{32}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Create DigitalOcean App from GitHub Repository}{32}{subsection.5.5.2}%
+\contentsline {subsubsection}{Connect GitHub Repository}{32}{section*.35}%
+\contentsline {subsubsection}{Configure Auto-Deploy Settings}{32}{section*.36}%
+\contentsline {subsubsection}{Configure App Resources}{33}{section*.37}%
+\contentsline {subsubsection}{Deploy the App}{33}{section*.38}%
+\contentsline {subsection}{\numberline {5.5.3}Verify Automatic Deployment}{33}{subsection.5.5.3}%
+\contentsline {subsubsection}{Test Auto-Deploy Functionality}{33}{section*.39}%
+\contentsline {subsubsection}{Monitor Deployment}{33}{section*.40}%
+\contentsline {section}{\numberline {5.6}Command-Line Compilation}{34}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Compilation Overview}{34}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Access DigitalOcean Droplet}{34}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Direct Container Compilation}{34}{subsection.5.6.3}%
+\contentsline {subsubsection}{Access the ShareLaTeX Container}{34}{section*.41}%
+\contentsline {subsubsection}{Navigate to Project Directory}{34}{section*.42}%
+\contentsline {subsubsection}{Locate Main LaTeX File}{34}{section*.43}%
+\contentsline {subsubsection}{Compile Using latexmk}{34}{section*.44}%
+\contentsline {subsubsection}{Alternative Compilation Methods}{34}{section*.45}%
+\contentsline {subsection}{\numberline {5.6.4}Extract Compiled PDF}{35}{subsection.5.6.4}%
+\contentsline {subsubsection}{Copy PDF from Container to Droplet}{35}{section*.46}%
+\contentsline {subsubsection}{Download PDF to Local Machine}{35}{section*.47}%
+\contentsline {subsection}{\numberline {5.6.5}Compilation from GitHub Repository}{35}{subsection.5.6.5}%
+\contentsline {subsubsection}{Clone Repository on Droplet}{35}{section*.48}%
+\contentsline {subsubsection}{Copy Files to Overleaf Container}{35}{section*.49}%
+\contentsline {subsubsection}{Compile Inside Container}{35}{section*.50}%
+\contentsline {subsubsection}{Extract Compiled Output}{35}{section*.51}%
+\contentsline {subsection}{\numberline {5.6.6}Troubleshooting Compilation Issues}{35}{subsection.5.6.6}%
+\contentsline {subsubsection}{View Compilation Logs}{35}{section*.52}%
+\contentsline {subsubsection}{Check LaTeX Package Installation}{36}{section*.53}%
+\contentsline {subsubsection}{Install Missing Packages}{36}{section*.54}%
+\contentsline {section}{\numberline {5.7}Version Control Integration with Document Title}{36}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Purpose and Implementation}{36}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Automated Version Insertion Strategy}{36}{subsection.5.7.2}%
+\contentsline {subsubsection}{Modify LaTeX Document for Dynamic Versioning}{36}{section*.55}%
+\contentsline {subsubsection}{Create Version Injection Script}{36}{section*.56}%
+\contentsline {subsubsection}{Usage Example}{37}{section*.57}%
+\contentsline {subsection}{\numberline {5.7.3}Manual Version Addition}{38}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Verification}{38}{subsection.5.7.4}%
+\contentsline {chapter}{\numberline {6}Overleaf Compilation and Sync with GitHub}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}System Overview}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Step 1: SSH into DigitalOcean Droplet}{39}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Step 2: Create Backup Directory and Initialize Git}{39}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Step 3: Create Backup Script}{40}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Step 4: Setup Cron Job (Every 5 Seconds)}{45}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Step 5: Create GitHub Actions Workflow}{45}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Step 6: Initial Commit and Push}{47}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Step 7: Test the Setup}{47}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Step 8: Monitoring Commands}{48}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Workflow Process}{48}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Verification Checklist}{49}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Troubleshooting Commands}{49}{section.6.12}%
+\contentsline {section}{\numberline {6.13}Project Structure}{49}{section.6.13}%
+\contentsline {chapter}{\numberline {7}Prometheus And Grafana}{50}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Technologies Used}{50}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Executed Outputs}{50}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Jenkins with Pytest}{53}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{53}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Environment Setup}{53}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Project Directory Structure}{53}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Docker Compose Configuration}{53}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Starting Jenkins}{54}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Jenkins Initial Configuration}{54}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Accessing Jenkins Web Interface}{54}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Plugin Installation}{54}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Admin User Creation}{54}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Python Installation in Jenkins Container}{54}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Python Project Implementation}{54}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Dependencies Configuration}{54}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Test Suite Implementation}{55}{subsection.8.4.2}%
+\contentsline {section}{\numberline {8.5}CI/CD Pipeline Configuration}{55}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Jenkinsfile Implementation}{55}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Git Integration}{55}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Local Repository Initialization}{55}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Git Ignore Configuration}{55}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}GitHub Repository Setup}{55}{subsection.8.6.3}%
+\contentsline {section}{\numberline {8.7}Jenkins Pipeline Job Configuration}{56}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Job Creation}{56}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}SCM Configuration}{56}{subsection.8.7.2}%
+\contentsline {section}{\numberline {8.8}Pipeline Execution and Results}{56}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Build Execution}{56}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Console Output Analysis}{56}{subsection.8.8.2}%
+\contentsline {subsection}{\numberline {8.8.3}Test Results}{57}{subsection.8.8.3}%
+\contentsline {section}{\numberline {8.9}Additional Configuration Changes}{58}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Docker Socket Permissions}{58}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Workspace Cleanup}{58}{subsection.8.9.2}%
+\contentsline {section}{\numberline {8.10}Bonus Features Implementation}{58}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Code Coverage Tracking}{58}{subsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.10.2}Email Notifications on Failure}{58}{subsection.8.10.2}%
+\contentsline {section}{\numberline {8.11}Deliverables}{59}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}GitHub Repository}{59}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Screenshots Provided}{59}{subsection.8.11.2}%
+\contentsline {section}{\numberline {8.12}Challenges and Solutions}{59}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Challenge: Python Not Available}{59}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Challenge: Docker Socket Permissions}{59}{subsection.8.12.2}%
+\contentsline {subsection}{\numberline {8.12.3}Challenge: Virtual Environment Path Issues}{60}{subsection.8.12.3}%
+\contentsline {subsection}{\numberline {8.12.4}Challenge: Email SMTP Configuration}{60}{subsection.8.12.4}%
+\contentsline {section}{\numberline {8.13}Conclusion}{60}{section.8.13}%
+\contentsline {chapter}{\numberline {9}Load Balancer and Virtual Host Setup}{61}{chapter.9}%
+\contentsline {section}{\numberline {9.1}A — Project: Load Balancer}{61}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}File Structure}{61}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}File Contents}{61}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Steps Executed}{62}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}B — Project: Virtual Host (Name-Based)}{62}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}File Structure}{62}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}File Contents}{63}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Steps Executed}{64}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}C — Local DNS (Simulated Domains)}{64}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Windows Hosts File Configuration}{64}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Linux / Unix Hosts File Configuration}{65}{subsection.9.3.2}%
+\contentsline {section}{\numberline {9.4}Executed Outputs}{65}{section.9.4}%
+\contentsline {chapter}{Glossary}{69}{section*.58}%
