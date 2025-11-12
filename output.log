@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  11 NOV 2025 21:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  12 NOV 2025 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,7 +821,7 @@ Chapter 3.
 \pydata@fh@0=\write9
 \openout9 = `_78E6221F6393D1356681DB398F14CE6D.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251111211046Z 78E6221F6393D1356681D
+runsystem(latexminted config  --timestamp 20251112195811Z 78E6221F6393D1356681D
 B398F14CE6D)...executed safely (allowed).
 
 
@@ -3322,7 +3322,7 @@ texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on output.pdf (69 pages, 634144 bytes).
+Output written on output.pdf (69 pages, 634143 bytes).
 PDF statistics:
  1223 PDF objects out of 1440 (max. 8388607)
  1101 compressed objects within 12 object streams
